@@ -1,0 +1,43 @@
+site_name: MOLGW
+
+site_url: http://www.molgw.org
+
+nav:
+    - 'Home': index.md
+    - download.md
+    - articles.md 
+    - theory.md
+    - 'Tutorials':
+        - 'Compilation': tuto_compilation.md
+        - 'Running MOLGW': tuto_running.md
+        - 'DFT': tuto_dft.md
+        - 'GW': tuto_gw.md
+        - 'BSE': tuto_bse.md
+    - faq.md
+    - 'Contributors': contact.md
+
+
+theme:
+  #name: readthedocs
+  name: material
+
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+  favicon: img/favicon.ico
+
+  logo: img/molgw_m_white.png
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
