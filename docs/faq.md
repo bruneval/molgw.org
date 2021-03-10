@@ -1,3 +1,3 @@
 # Frequently Asked Questions
 
-Empty
+*This page is under construction*

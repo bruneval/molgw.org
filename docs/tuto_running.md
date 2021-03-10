@@ -10,7 +10,7 @@ With MPI, use
 mpirun /path/to/molgw molgw.in > molgw.out 
 ```
 
-With OPENMP, use
+With OPENMP, one may need to set up a few environment variables:
 ```bash
 export OMP_NUM_THREADS=4
 export OMP_STACKSIZE=512M
@@ -19,5 +19,5 @@ export OMP_STACKSIZE=512M
 When `OMP_STACKSIZE` is too small, segmentation faults occur.
 
 
-The input file are explained [here](tuto_dft.md).
+The input files are explained [here](tuto_dft.md).
 

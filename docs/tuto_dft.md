@@ -9,8 +9,8 @@ Fortran syntax is applied here. Comments are marked with `!`. A comma `,` is a v
 
 2. A list of atoms, which is very similar to an xyz file
 
-
-Here follows a self-consistent DFT calculations with BHLYP functional.
+There exists a comprehensive list of all the input variables in `~molgw/docs/input_variables.html`,
+but for a DFT calculation of water, the input files is as simple as:
 
 ```fortran
 &molgw

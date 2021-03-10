@@ -1,7 +1,7 @@
 # Theory
 
 
-*This section is under construction*
+*This page is under construction*
 
 
 

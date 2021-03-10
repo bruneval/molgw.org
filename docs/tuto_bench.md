@@ -132,14 +132,12 @@ with open('gw100molgw.json', 'w') as json_file:
 
 The beginning of the output looks like
 ```txt
-102 molgw.yaml files identified in directory run_001
-
 CAS number           BHLYP   GW energy
 
-7726-95-6           -8.095   -10.300
-7786-30-3           -9.004   -11.267
-75-02-5             -7.741   -10.231
-544-92-3            -8.187   -10.016
+1309-48-4           -7.474    -7.620
+60-29-7             -8.900    -9.874
+25681-79-2          -4.014    -4.929
+593-66-8            -7.972    -9.183
 ...
 ```
 
@@ -192,6 +190,11 @@ plt.tight_layout()
 plt.show()
 ```
 
+The agreement with the implementation in [Turbomole 7](http://www.turbomole.org) is excellent:
 ![TM](img/turbomole.png)
+
+The agreement with [CCSD(T)](http://dx.doi.org/10.1080/00268976.2015.1025113) is good.
+The worst outlier is the HOMO SO$_2$.
 ![CC](img/ccsdt.png)
+
 
