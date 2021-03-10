@@ -13,6 +13,7 @@ nav:
         - 'DFT': tuto_dft.md
         - 'GW': tuto_gw.md
         - 'BSE': tuto_bse.md
+        - 'Running a benchmark': tuto_bench.md
     - faq.md
     - 'Contributors': contact.md
 

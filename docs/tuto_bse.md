@@ -93,6 +93,9 @@ and their oscillator strengths:
 ```
 
 A file named `photoabsorption_cross_section.dat` is produced.
+It contains the photoabsorption cross-section tensor, often written $\alpha_{xy}(\omega$.
+
+Let us plot the second column that contains the Trace of the tensor.
 
 ![photoabsorption](img/h2o_photoabs.png)
 
