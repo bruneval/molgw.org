@@ -194,7 +194,7 @@ The agreement with the implementation in [Turbomole 7](http://www.turbomole.org)
 ![TM](img/turbomole.png)
 
 The agreement with [CCSD(T)](http://dx.doi.org/10.1080/00268976.2015.1025113) is good.
-The worst outlier is the HOMO SO$_2$.
+The worst outlier is the HOMO of SO$_2$.
 ![CC](img/ccsdt.png)
 
 

@@ -6,7 +6,6 @@ nav:
     - 'Home': index.md
     - download.md
     - articles.md 
-    - theory.md
     - 'Tutorials':
         - 'Compilation': tuto_compilation.md
         - 'Running MOLGW': tuto_running.md
@@ -14,8 +13,9 @@ nav:
         - 'GW': tuto_gw.md
         - 'BSE': tuto_bse.md
         - 'Running a benchmark': tuto_bench.md
-    - faq.md
+    - 'FAQ': faq.md
     - 'Contributors': contact.md
+    #- theory.md
 
 
 theme:
