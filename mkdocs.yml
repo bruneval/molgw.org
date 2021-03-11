@@ -19,7 +19,6 @@ nav:
 
 
 theme:
-  #name: readthedocs
   name: material
 
   features:

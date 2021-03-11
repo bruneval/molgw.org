@@ -1,6 +1,6 @@
 import sys, os, subprocess, shutil
 
-subprocess.run(['mkdocs', 'build'])
+subprocess.run(['mkdocs', 'build','--clean'])
 shutil.copyfile('site/articles/index.html','site/articles/old.html')
 f = open('site/articles/old.html','r')
 fnew = open('site/articles/index.html','w')

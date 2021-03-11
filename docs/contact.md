@@ -10,7 +10,7 @@ And in particular to
 
 [MOLGW 1: many-body perturbation theory software for atoms, molecules, and clusters, F. Bruneval, T. Rangel, S.M. Hamed, M. Shao, C. Yang, and J.B. Neaton, Comput. Phys. Commun. 208, 149 (2016)](https://doi.org/10.1016/j.cpc.2016.06.019)
 
-[Open version](https://www.sciencedirect.com/science/article/am/pii/S0010465516301990)
+[Open-access version](files/molgw_v1.pdf)
 
 
 ## Contributors
