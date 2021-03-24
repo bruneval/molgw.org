@@ -1,4 +1,4 @@
-# Running a complete benchmark at once
+# Running series of calculations with python
 
 
 Here we use a python script to generate many input files for **MOLGW**.
@@ -170,14 +170,10 @@ for file in files:
             print(file + ' is corrupted')
             pass
 
-e1 = []
-e2 = []
-for mol in sets[0]["data"].keys():
-   try:
-      e1.append(float(sets[0]["data"][mol]))
-      e2.append(float(sets[1]["data"][mol]))
-   except:
-      pass
+mol1 = set(sets[0]["data"].keys())
+mol2 = set(sets[1]["data"].keys())
+e1 = [ float(sets[0]["data"][mol])  for mol in  mol1.intersection(mol2) ]
+e2 = [ float(sets[1]["data"][mol])  for mol in  mol1.intersection(mol2) ]
 
 xymin=min(e1+e2)
 xymax=max(e1+e2)
