@@ -177,12 +177,16 @@ plt.show()
 ```
 
 The agreement with the implementation in [Turbomole 7](http://www.turbomole.org) is excellent:
+
 ![TM](img/turbomole.png)
+
 The small differences are certainly due the auxiliary basis or to the frozencore approximation used here.
 The mean absolute error (MAE) is 29 meV.
 
 The agreement with [CCSD(T)](http://dx.doi.org/10.1080/00268976.2015.1025113) is good.
 The worst outlier is the HOMO of SO$_2$.
+The mean absolute error (MAE) is about 140 meV.
+
 ![CC](img/ccsdt.png)
 
 
