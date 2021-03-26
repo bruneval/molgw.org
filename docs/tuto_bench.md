@@ -25,7 +25,7 @@ Then edit the script especially here
 #
 # Hard-coded information
 #
-directory       = 'run_001'
+directory       = 'run_bhlyp'
 executable      = '${HOME}/devel/molgw/molgw'
 ```
 
@@ -54,105 +54,88 @@ for basis in ['Def2-TZVPP']:
 ```sh
 python3 run_molgw.py
 ```
-generates all the input files in folder `run_001` and a bash script `run.sh` that can run all the calculations.
+generates all the input files in folder `run_bhlyp` and a bash script `run.sh` that can run all the calculations.
 
 Besides the standard output, **MOLGW** generates a YAML formatted output that is very handy for post-processing.
 
-Here follows a python script that lists all the `molgw.yaml` files, transforms them in a dictionary, and then retrieve the $GW$ HOMO energies.
+Here follows a python script that lists all the `molgw.yaml` files and prints all the $GW$ HOMO energies.
+The python script will use some functionalities that are implemented in the python module `molgw.py`, which should be added to the `PYTHONPATH` or copied in the working directory.
+For instance, 
+```sh
+export PYTHONPATH=$PYTHONPATH:/path/to/molgw/utils/
+```
+
+Here is the script:
 ```python
 #!/usr/bin/python3
-import sys, os, yaml, json
-from yaml import load, Loader
-
-########################################################################
-# Hard coded directly
-#
-directory = 'run_001'
-
-########################################################################
-# Find all the yaml files in the directory
-#
-yaml_files = []
-for root, dirs, files in os.walk(directory):
-    for filename in files:
-        if '.yaml' in filename:
-            yaml_files.append(os.path.join(root, filename))
-print('{} molgw.yaml files identified in directory '.format(len(yaml_files)) + directory)
+  
+import molgw
 
 
-########################################################################
-# Read all the yaml files -> dictionary
-#
-calc = []
-for yaml_file in yaml_files:
-    with open(yaml_file, 'r') as stream:
-        try:
-            calc.append(load(stream,Loader=Loader))
-        except:
-            print(yaml_file + ' is corrupted')
-            pass
+directory = 'run_bhlyp'
 
-########################################################################
-# Analyze the dictionary
-#
-print('\n{:<16}   {:^9} {:^9}\n'.format('CAS number',calc[0]['input parameters']['scf'],'GW energy'))
+calc = molgw.parse_yaml_files(directory)
+
+scf     = calc[0]['input parameters']['scf']
+postscf = calc[0]['input parameters']['postscf']
+
+print('\n{:<16} {:<16}  {:^9} {:^9}\n'.format('CAS number','Formula',scf + ' HOMO',postscf+' HOMO'))
 
 data={}
+formulas={}
 for c in calc:
     mol =  c["input parameters"]["comment"]
-    homo = int( c["physical system"]["electrons"] * 0.50 )
-    homo_gks = c["gks energy"]["spin channel 1"][homo]
+    homo_gks = molgw.get_homo_energy("gks",c)
+    formulas[mol] = molgw.get_chemical_formula(c)
     try:
-        homo_gw  = c["gw energy"]["spin channel 1"][homo]
-        print('{:<16} {:9.3f} {:9.3f}'.format(mol,homo_gks,homo_gw))
+        homo_gw  = molgw.get_homo_energy('gw',c)
+        print('{:<16} {:<16} {:9.3f} {:9.3f}'.format(mol,formulas[mol],homo_gks,homo_gw))
         data[mol] = homo_gw
     except:
-        print('{:<16} reading FAILED: maybe SCF cycles did not converge?'.format(mol))
+        pass
 
-########################################################################
-# Create a json file
-gw100molgw = dict()
-gw100molgw["orbital"]= 'HOMO'
-gw100molgw["remark"]= "RIJK with AUTO"
-gw100molgw["code"]= "MOLGW"
-gw100molgw["basis_size"]= "3" 
-gw100molgw["parameters"]= { "eta": 0.001 } 
-gw100molgw["basis"]= "gaussian"
-gw100molgw["code_version"]= "2.E"
-gw100molgw["qpe"]= "solved"
-gw100molgw["DOI"]= "unpublished"
-gw100molgw["basis_name"]= calc[0]["input parameters"]["basis"]
-gw100molgw["calc_type"]= calc[0]["input parameters"]["postscf"] + '@' + calc[0]["input parameters"]["scf"]
-gw100molgw["data"]= data
+print('{} HOMO energies have been obtained'.format(len(data)))
 
-with open('gw100molgw.json', 'w') as json_file:
-        json.dump(gw100molgw,json_file,indent=2,separators=(',', ': '))
+details = dict()
+details["orbital"]= 'HOMO'
+details["remark"]= "RIJK with AUTO"
+details["basis_size"]= "3"
+details["parameters"]= { "eta": float(calc[0]["input parameters"]["eta"])*27.211 }
+details["basis_name"]= calc[0]["input parameters"]["basis"]
+details["calc_type"]= postscf + '@' + scf
+
+# Useful addition from MOLGW
+details["formulas"]= formulas
+
+molgw.create_gw100_json('gw100'+postscf+'@'+scf+'.json',data,**details)
 ```
 
 
 The beginning of the output looks like
 ```txt
-CAS number           BHLYP   GW energy
+CAS number       Formula           BHLYP HOMO G0W0 HOMO
 
-1309-48-4           -7.474    -7.620
-60-29-7             -8.900    -9.874
-25681-79-2          -4.014    -4.929
-593-66-8            -7.972    -9.183
-...
+1309-48-4        MgO                 -7.474    -7.620
+60-29-7          C4OH10              -8.900    -9.874
+25681-79-2       Na2                 -4.014    -4.929
+593-66-8         C2IH3               -7.972    -9.183
+1304-56-9        BeO                 -8.546    -9.607
 ```
 
-A json file named `gw100molgw.json` is generated that can be contributed to the official GW100 web site.
+A json file named `gw100G0W0@BHLYP.json` is also generated.
+It conforms to the standard employed by the official GW100 web site.
 
-Conversely one can retrieve files from GW100 github repository:
+Finally we can compare with GW100 data sets, which have been mirrored here:
 ```sh
-wget https://raw.githubusercontent.com/setten/GW100/master/data/G0W0%40BH-LYP_HOMO_Tv7.0_def2_TZVPP_cbas.json
-wget https://raw.githubusercontent.com/setten/GW100/master/data/CCSD\(T\)_HOMO_Cv_def2-TZVPP.json
+wget http://www.molgw.org/files/G0W0@BH-LYP_HOMO_Tv7.0_def2_TZVPP_cbas.json
+wget http://www.molgw.org/files/CCSD\(T\)_HOMO_Cv_def2-TZVPP.json
 ```
 
 and compare them with our results
 ```py
 #!/usr/bin/python3
-import sys, os, yaml, json
+
+import sys, json
 import matplotlib.pyplot as plt
 
 if len(sys.argv) > 2:
@@ -172,8 +155,14 @@ for file in files:
 
 mol1 = set(sets[0]["data"].keys())
 mol2 = set(sets[1]["data"].keys())
-e1 = [ float(sets[0]["data"][mol])  for mol in  mol1.intersection(mol2) ]
-e2 = [ float(sets[1]["data"][mol])  for mol in  mol1.intersection(mol2) ]
+e1 = []
+e2 = []
+
+for mol in mol1.intersection(mol2):
+   e1.append(float(sets[0]["data"][mol]))
+   e2.append(float(sets[1]["data"][mol]))
+
+print('{} common molecules found'.format(len(e1)))
 
 xymin=min(e1+e2)
 xymax=max(e1+e2)
@@ -183,11 +172,14 @@ plt.plot([xymin,xymax],[xymin,xymax],'-',color='black',lw=2.0)
 plt.scatter(e1, e2,label='{} molecules'.format(len(e1)))
 plt.legend()
 plt.tight_layout()
+plt.savefig('comp.png',format='png')
 plt.show()
 ```
 
 The agreement with the implementation in [Turbomole 7](http://www.turbomole.org) is excellent:
 ![TM](img/turbomole.png)
+The small differences are certainly due the auxiliary basis or to the frozencore approximation used here.
+The mean absolute error (MAE) is 29 meV.
 
 The agreement with [CCSD(T)](http://dx.doi.org/10.1080/00268976.2015.1025113) is good.
 The worst outlier is the HOMO of SO$_2$.
