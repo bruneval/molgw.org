@@ -21,3 +21,5 @@ When `OMP_STACKSIZE` is too small, segmentation faults occur.
 
 The input files are explained [here](tuto_dft.md).
 
+The list of all the input variables can be obtained [here](input_variables.md).
+

@@ -6,6 +6,7 @@ The input files consists of two sections:
 
 1. A Fortran namelist starting with `&molgw` and ending with `/`.
 Fortran syntax is applied here. Comments are marked with `!`. A comma `,` is a valid delimiter.
+All the existing input variables are listed [here](input_variables.md).
 
 2. A list of atoms, which is very similar to an xyz file
 
