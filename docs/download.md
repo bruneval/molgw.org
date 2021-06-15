@@ -2,7 +2,7 @@
 
 ## Sources
 
-- Latest release [MOLGW 2.E](https://github.com/bruneval/molgw/archive/v2.E.tar.gz)
+- Latest release [MOLGW 2.F](https://github.com/bruneval/molgw/archive/v2.F.tar.gz)
 
 - Browse the latest sources directly on github [![github](img/icon_github.png)](https://github.com/bruneval/molgw)
 
@@ -33,7 +33,7 @@ For instance, for Intel processors, the highly efficient MKL library can be obta
     - Recommended version: [2.6.0](https://github.com/evaleev/libint/releases/tag/v2.6.0)
 
 - **Libxc** (mandatory) for the exchange-correlation approximation of DFT: [Download Page](https://www.tddft.org/programs/libxc/download/previous/)
-    - Recommended version: [4.3.4](http://www.tddft.org/programs/libxc/down.php?file=4.3.4/libxc-4.3.4.tar.gz)
+    - Recommended version: [5.1.5](http://www.tddft.org/programs/libxc/down.php?file=5.1.5/libxc-5.1.5.tar.gz)
 
 and two optional libraries to run in parallel:
 

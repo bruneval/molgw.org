@@ -17,12 +17,12 @@ To be fully operational, **MOLGW** needs the following libraries:
 
 ### Compiling LIBXC
 
-Obtain LIBXC version 4.3.4, compile and install
+Obtain the latest LIBXC version, compile and install
 ```sh
-wget http://www.tddft.org/programs/libxc/down.php?file=4.3.4/libxc-4.3.4.tar.gz
-tar xzf libxc-4.3.4.tar.gz
-cd libxc-4.3.4
-./configure --prefix=$(HOME)/opt/libxc-4.3.4/
+wget http://www.tddft.org/programs/libxc/down.php?file=5.1.5/libxc-5.1.5.tar.gz
+tar xzf libxc-5.1.5.tar.gz
+cd libxc-5.1.5
+./configure --prefix=$(HOME)/opt/libxc-5.1.5/
 make
 make install
 ```
@@ -76,7 +76,7 @@ Here is an example for gfortran with MKL, MPI and OPENMP.
 ```sh
 OPENMP= -fopenmp
 
-CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_LIBINT_ONEBODY -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
+CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
 
 FC=mpif90
 FCFLAGS=  -O2
@@ -88,7 +88,7 @@ LAPACK= ${MKLROOT}/lib/intel64/libmkl_scalapack_lp64.a -Wl,--start-group ${MKLRO
 
 SCALAPACK=
 
-LIBXC_ROOT=${HOME}/opt/libxc-4.3.4/
+LIBXC_ROOT=${HOME}/opt/libxc-5.1.5/
 
 LIBINT_ROOT=${HOME}/opt/libint-2.6.0/
 ```
@@ -96,7 +96,7 @@ LIBINT_ROOT=${HOME}/opt/libint-2.6.0/
 The most tricky line is the [MKL linking](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl/link-line-advisor.html).
 Another way to obtain this line:
 ```sh
-$MKLROOT/tools/mkl_link_tool -libs  --compiler=gnu_f --linking=static --openmp=gomp --cluster_library=scalapack --mpi=openmpi
+${MKLROOT}/bin/intel64/mkl_link_tool -libs  --compiler=gnu_f --linking=static --openmp=gomp --cluster_library=scalapack --mpi=openmpi
 ```
 
 
@@ -134,7 +134,7 @@ Then compiling the libraries should be a piece of cake:
 ```sh
 spack install openmpi                  # MPI
 spack install intel-mkl                # BLAS/LAPACK/SCALAPACK
-spack install libxc@4.3.4              # MOLGW is not compatible with LIBXC 5
+spack install libxc                    # LIBXC
 spack install libint tune=molgw-lmax-7 # LIBINT compilation especially tuned for MOLGW
 ```
 Then, load the libraries with the `module` tool:

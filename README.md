@@ -1,2 +1,7 @@
 # molgw.org
-This is the markdown source of the *future* molgw.org website
+This is the markdown source of the molgw.org website
+
+generate the html files with
+
+python build_site.py
+
