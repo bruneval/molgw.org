@@ -31,7 +31,6 @@ The GNU Public License offers the possibility for the user to download, compile,
 
 
 
-
 ## MOLGW: What can it do?
 
 
@@ -50,10 +49,12 @@ It implements a self-consistent mean-field calculation, followed by a many-body 
 
 - Standard one-shot calculations: $G_0W_0$
 - Eigenvalue-self-consistent calculations: ev$GW$
-- Quasiparticle-Self-consistent $GW$>: QS$GW$
+- Quasiparticle-Self-consistent $GW$: QS$GW$
 - Static COHSEX
 - Self-consistent COHSEX
 - PT3, also known as Electron Propagator Theory
+- linearized $GW$ density-matrix
+- Natural Orbital functional Theory (NOFT)
 
 
 **MOLGW** can calculate the optical excitation energies and spectra within:

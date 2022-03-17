@@ -7,7 +7,7 @@
 
 To be fully operational, **MOLGW** needs the following libraries:
 
-- LIBINT for the Coulomb integrals $(\alpha\beta| \frac{1}{|\mathbf{r}-\mathbf{r'}|} | P )$ for instance
+- LIBCINT or LIBINT for the Gaussian integrals $(\alpha\beta| \frac{1}{|\mathbf{r}-\mathbf{r'}|} | P )$ for instance
 - LIBXC  for the DFT approximate functionals: $E_{xc}(\rho(\mathbf{r}))$
 - MPI for parallelism
 - BLAS/LAPACK/SCALAPACK for the linear algebra (matrix multiplication/inversion/diagonalization)
@@ -28,7 +28,37 @@ make install
 ```
 
 
-### Compiling LIBINT
+### Compiling LIBCINT
+
+
+LIBCINT is a very relevant alternative to LIBINT.
+
+Starting with MOLGW version 3, we strongly advise to use LIBCINT instead of LIBINT.
+From our tests, LIBCINT is faster and easier to compile *and* faster to run.
+
+Just compare the length of this tutorial section compared to the LIBINT section...
+
+
+Here is a compilation example:
+```sh
+wget https://github.com/sunqm/libcint/archive/refs/tags/v5.1.1.tar.gz
+tar xzf v5.1.1.tar.gz; cd libcint-5.1.1
+mkdir build; cd build
+cmake -DCMAKE_INSTALL_PREFIX:PATH=${HOME}/opt/libcint-5.1.1/ -DWITH_RANGE_COULOMB=1 -DBUILD_SHARED_LIBS=0 ..
+make; make install
+```
+
+But on modern linux distributions, LIBCINT can be obtained with the package manager directly:
+
+On Fedora, for instance:
+```sh
+sudo dnf install libcint libcint-devel
+
+```
+
+
+
+### Compiling LIBINT 
 
 LIBINT is compilation tricky and lengthy. It relies on external libraries and very modern C++.
 
@@ -76,7 +106,7 @@ Here is an example for gfortran with MKL, MPI and OPENMP.
 ```sh
 OPENMP= -fopenmp
 
-CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
+CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL -DHAVE_LIBCINT
 
 FC=mpif90
 FCFLAGS=  -O2
@@ -90,7 +120,9 @@ SCALAPACK=
 
 LIBXC_ROOT=${HOME}/opt/libxc-5.1.5/
 
-LIBINT_ROOT=${HOME}/opt/libint-2.6.0/
+LIBINT_ROOT=
+
+LIBCINT=-lcint
 ```
 
 The most tricky line is the [MKL linking](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl/link-line-advisor.html).
@@ -98,8 +130,6 @@ Another way to obtain this line:
 ```sh
 ${MKLROOT}/bin/intel64/mkl_link_tool -libs  --compiler=gnu_f --linking=static --openmp=gomp --cluster_library=scalapack --mpi=openmpi
 ```
-
-
 
 
 
@@ -156,7 +186,7 @@ With this, edit the file `molgw/src/my_machine.arch`:
 ```sh
 OPENMP= -fopenmp
 
-CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_LIBINT_ONEBODY -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
+CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
 
 FC=mpif90
 FCFLAGS=  -O2

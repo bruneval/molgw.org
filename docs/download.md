@@ -22,6 +22,7 @@ Fortran2008 and C++ compilers are mandatory.
 - the GNU compiler suite: `gfortran` and `g++` (Version ≥ 9.1.0 recommended)
 - the Intel compiler suite: `ifort` and `icpc` (Version ≥ 19.0 recommended)
 
+
 ### Libraries
 
 **MOLGW** requires three external libraries:
@@ -29,10 +30,11 @@ Fortran2008 and C++ compilers are mandatory.
 - **BLAS/LAPACK** (mandatory) for linear algegra from [netlib.org](http://www.netlib.org) or better from the vendor of your specific machine.
 For instance, for Intel processors, the highly efficient MKL library can be obtained for free
 
-- **Libint** (mandatory) for the Coulomb integrals evaluation: [Download page](https://github.com/evaleev/libint/releases/)
-    - Recommended version: [2.6.0](https://github.com/evaleev/libint/releases/tag/v2.6.0)
+- **LIBCINT** or **LIBINT** (mandatory) for the Coulomb integrals evaluation: [Download page](https://github.com/sunqm/libcint/releases)
+    - Recommended version for LIBCINT: [5.1.1](https://github.com/sunqm/libcint/releases/tag/v5.1.1)
+    - Recommended version for LIBINT: [2.7.0](https://github.com/evaleev/libint/releases/tag/v2.7.0)
 
-- **Libxc** (mandatory) for the exchange-correlation approximation of DFT: [Download Page](https://www.tddft.org/programs/libxc/download/previous/)
+- **LIBXC** (mandatory) for the exchange-correlation approximation of DFT: [Download Page](https://www.tddft.org/programs/libxc/download/previous/)
     - Recommended version: [5.1.5](http://www.tddft.org/programs/libxc/down.php?file=5.1.5/libxc-5.1.5.tar.gz)
 
 and two optional libraries to run in parallel:

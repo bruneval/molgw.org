@@ -4,6 +4,8 @@
 	
 *The list of answered questions is being built. If your question is not in the list, please contact us.*
 
+You may also consult the [Discussions](https://github.com/bruneval/molgw/discussions) section on our github page.
+
 
 ---
 ## Compilation
@@ -13,9 +15,25 @@
 Use a newer fortran compiler. Gfortran  ≥ 9 or Intel ≥ 19 are strongly recommended.
 
 
-### Compilation of LIBINT is hard, long.
+### At linking time, the compiler complains about not finding some mathematical functions, for instance, `undefined reference to 'sqrtq'`
 
-Yes, we know that.
+Sometimes LIBCINT is compiled with quadruple-precision maths in C.
+
+Just edit `my_machine.arch` to add `-lquadmath`:
+
+```sh
+LIBCINT=-lcint -lquadmath
+```
+
+
+### Compilation of LIBINT is hard, long, delicate.
+
+Yes, we are aware of that.
+
+Starting with MOLGW version 3, **LIBCINT** can be used instead of **LIBINT**.
+From our tests, LIBCINT is faster to compile and faster to run.
+We strongly advise to switch to LIBCINT.
+
 Please consult the [tutorial about compilation](tuto_compilation.md) for help.
 
 
