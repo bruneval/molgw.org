@@ -1,4 +1,4 @@
-# MOLGW Input variable list
+# Input variable list
 
 *Version 3.0.beta*
 

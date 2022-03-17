@@ -32,10 +32,10 @@ For instance, for Intel processors, the highly efficient MKL library can be obta
 
 - **LIBCINT** or **LIBINT** (mandatory) for the Coulomb integrals evaluation: [Download page](https://github.com/sunqm/libcint/releases)
     - Recommended version for LIBCINT: [5.1.1](https://github.com/sunqm/libcint/releases/tag/v5.1.1)
-    - Recommended version for LIBINT: [2.7.0](https://github.com/evaleev/libint/releases/tag/v2.7.0)
+    - Recommended version for LIBINT: [2.7.1](https://github.com/evaleev/libint/releases/tag/v2.7.1)
 
 - **LIBXC** (mandatory) for the exchange-correlation approximation of DFT: [Download Page](https://www.tddft.org/programs/libxc/download/previous/)
-    - Recommended version: [5.1.5](http://www.tddft.org/programs/libxc/down.php?file=5.1.5/libxc-5.1.5.tar.gz)
+    - Recommended version: [5.2.2](http://www.tddft.org/programs/libxc/down.php?file=5.2.2/libxc-5.2.2.tar.gz)
 
 and two optional libraries to run in parallel:
 
