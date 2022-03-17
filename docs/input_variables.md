@@ -1,4 +1,6 @@
-# Input variable list
+# MOLGW Input variable list
+
+*Version 3.0.beta*
 
 ---
 
@@ -106,6 +108,32 @@
 [triplet](#triplet) 
 [use_correlated_density_matrix](#use_correlated_density_matrix) 
 [virtual_fno](#virtual_fno) 
+
+
+## Natural Orbital Functional Theory 
+
+[noft_complex](#noft_complex) 
+[noft_fcidump](#noft_fcidump) 
+[noft_NOTupdateOCC](#noft_NOTupdateOCC) 
+[noft_NOTupdateORB](#noft_NOTupdateORB) 
+[noft_functional](#noft_functional) 
+[noft_printdmn](#noft_printdmn) 
+[noft_printswdmn](#noft_printswdmn) 
+[noft_printints](#noft_printints) 
+[noft_readCOEF](#noft_readCOEF) 
+[noft_readFdiag](#noft_readFdiag) 
+[noft_readGAMMAS](#noft_readGAMMAS) 
+[noft_readOCC](#noft_readOCC) 
+[noft_sta](#noft_sta) 
+[noft_ithresh_lambda](#noft_ithresh_lambda) 
+[noft_lowmemERI](#noft_lowmemERI) 
+[noft_Lpower](#noft_Lpower) 
+[noft_npairs](#noft_npairs) 
+[noft_ncoupled](#noft_ncoupled) 
+[noft_ndiis](#noft_ndiis) 
+[noft_nscf](#noft_nscf) 
+[noft_restart](#noft_restart) 
+[noft_tolE](#noft_tolE) 
 
 
 ## IO input variables 
@@ -1263,6 +1291,358 @@ Sets the number of neutral excitations to be calculated in TD-DFT or BSE.       
 **Description:** 
 
 Sets the number of ghost atoms in the molecule. Used to place basis function where there is no atom. Useful for Basis Set Superposition Error 
+
+
+---
+### noft_Lpower
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** real 
+
+**Default:** 0.53 
+
+**Description:** 
+
+Power functional approximation exponent used in NOFT calcs. 
+
+
+---
+### noft_NOTupdateOCC
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Do a NOFT optimization but keeping fixed the occ numbers (or GAMMAS) read. 
+
+
+---
+### noft_NOTupdateORB
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Do a NOFT optimization but keeping fixed the orbitals read. 
+
+
+---
+### noft_complex
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Use complex molecular orb. coeficients in NOFT calcs. (default=no). 
+
+
+---
+### noft_fcidump
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Print the FCIDUMP file in NOFT module. 
+
+
+---
+### noft_functional
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** characters 
+
+**Default:** PNOF7 
+
+**Description:** 
+
+Select the NOFT approx. to use (default= 'PNOF7'). Other options are 'PNOF5', 'HF', 'MULLER', and 'POWER'. 
+
+
+---
+### noft_ithresh_lambda
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** integer 
+
+**Default:** 5 
+
+**Description:** 
+
+Threshold used to determine [Lambda_pq - Lambda_qp*] hermiticity. 
+
+
+---
+### noft_lowmemERI
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** yes 
+
+**Description:** 
+
+Store the nat. orb. ERI as (all,occ,occ,occ) (default) or as (all,all,all,all) in NOFT module. 
+
+
+---
+### noft_ncoupled
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** integer 
+
+**Default:** 2 
+
+**Description:** 
+
+Number of coupled orbs. per pair used in NOFT calcs. (default=2, perfect pairing). 
+
+
+---
+### noft_ndiis
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** integer 
+
+**Default:** 5 
+
+**Description:** 
+
+Number of orb. optimization iterations used in DIIS by NOFT module (default=5). 
+
+
+---
+### noft_npairs
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** integer 
+
+**Default:** 1 
+
+**Description:** 
+
+Number of active electron pairs used in NOFT calcs. (default=1 pair). 
+
+
+---
+### noft_nscf
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** integer 
+
+**Default:** 1000 
+
+**Description:** 
+
+Maximum number of global iterations used by NOFT module (default=1000). 
+
+
+---
+### noft_printdmn
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Print optimized NOFT 1,2-RDMs (default= 'no'). 
+
+
+---
+### noft_printints
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Print hCORE and ERImol integrals in the optimized basis (default= 'no'). 
+
+
+---
+### noft_printswdmn
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Print optimized spin-with NOFT 1,2-RDMs (default= 'no'). 
+
+
+---
+### noft_readCOEF
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Read NO_COEF file to use those coefficients as initial guess (default= 'no'). 
+
+
+---
+### noft_readFdiag
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Read F_pp values from F_DIAG file and use them as diag. of Fpq matrix (default= 'no'). 
+
+
+---
+### noft_readGAMMAS
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Read Gammas_i from GAMMAS file and use them as indep. variables in occ. optimization (default= 'no'). 
+
+
+---
+### noft_readOCC
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Read occ. from DM1 file and use them to compute Gammas (the indep. variables in occ. optimization). Default= 'no'. 
+
+
+---
+### noft_restart
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Use binary files to restart NOFT calcs. (default= 'no'). 
+
+
+---
+### noft_sta
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** yes 
+
+**Description:** 
+
+Decide whether to use PNOF7 or PNOF7s (default= 'yes', use 'PNOF7s'). 
+
+
+---
+### noft_tolE
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** real 
+
+**Default:** 1e-09 
+
+**Description:** 
+
+Threshold used to determine that the energy change in NOFT calcs. is small; hence, it has converged. 
 
 
 ---
@@ -2479,6 +2859,6 @@ Specifies the location of the xyz file that contains the atomic positions. It ca
 
 
 
-*Generated by input_variables.py on 28 April 2021* 
+*Generated by input_variables.py on 17 March 2022* 
 
 
