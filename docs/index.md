@@ -2,6 +2,9 @@
 
 ![MOLGW](img/molgw.png)
 
+![proton_in_lif](img/lif_channel_ACQZ_translucent.gif)
+*A swift proton in rocksalt LiF within Real-time TD-DFT [from [X. Qi et al., Phys. Rev. Lett. (2022)](http://dx.doi.org/10.1103/PhysRevLett.128.043401)]*
+
 
 ## MOLGW: What is it?
 
@@ -45,7 +48,7 @@ It implements a self-consistent mean-field calculation, followed by a many-body 
 - range-separated hybrid: HSE06, CAM-B3LYP, LC-$\omega$PBE, OTRSH, BNL
 - Hartree-Fock
 
-**MOLGW** can calculate the electron quasiparticle energies within different flavors of the $GW$ approximation:
+**MOLGW** can calculate the electron quasiparticle energies within different flavors of the Many-body perturbation theory:
 
 - Standard one-shot calculations: $G_0W_0$
 - Eigenvalue-self-consistent calculations: ev$GW$
@@ -53,14 +56,19 @@ It implements a self-consistent mean-field calculation, followed by a many-body 
 - Static COHSEX
 - Self-consistent COHSEX
 - PT3, also known as Electron Propagator Theory
+
+
+**MOLGW** also has some densitu-matrix theory features:
+
 - linearized $GW$ density-matrix
 - Natural Orbital functional Theory (NOFT)
 
 
-**MOLGW** can calculate the optical excitation energies and spectra within:
+**MOLGW** can calculate the neutral excitation energies and optical spectra within:
 
 - Bethe-Salpeter Equation (Tamm-Dancoff Approximation or not)
-- TD-DFT (Tamm-Dancoff Approximation or not)
+- Linear-response TD-DFT (Tamm-Dancoff Approximation or not)
+- Real-time TD-DFT
 
 Incidentally, **MOLGW** can calculate the MBPT total energies within a few popular approximations:
 

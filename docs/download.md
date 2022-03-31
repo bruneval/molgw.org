@@ -2,7 +2,7 @@
 
 ## Sources
 
-- Latest release [MOLGW 2.F](https://github.com/bruneval/molgw/archive/v2.F.tar.gz)
+- Latest release [MOLGW 3.0](https://github.com/bruneval/molgw/archive/v3.0.tar.gz)
 
 - Browse the latest sources directly on github [![github](img/icon_github.png)](https://github.com/bruneval/molgw)
 
