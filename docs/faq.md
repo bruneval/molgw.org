@@ -127,6 +127,14 @@ This avoids completely the diagonalization at the expense of a quadrature in the
 See the [tutorial](tuto_gw.md) for more details.
 
 
+### Why does the first iteration of evGW (or GnWn) differ from G0W0?
+
+For speed and simplicity, we decided to just evaluate the self-energy at the previous quasiparticle energy in evGW.
+This avoids the calculation of multiple frequencies and skips the graphical solution technique.
+Once the self-consistency is reached, the final result should be insensitive to this technical choice:
+the self-energy is evaluated at the correct self-consistent quasiparticle energy!
+
+
 ---
 ## BSE / TDDFT calculation
 
