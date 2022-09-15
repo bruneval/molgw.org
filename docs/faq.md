@@ -130,8 +130,19 @@ See the [tutorial](tuto_gw.md) for more details.
 ### Why does the first iteration of evGW (or GnWn) differ from G0W0?
 
 For speed and simplicity, we decided to just evaluate the self-energy at the previous quasiparticle energy in evGW.
+
+$$
+  \Sigma_c(\epsilon_i^{(n-1)})
+$$
+
+instead of 
+
+$$
+  \Sigma_c(\epsilon_i^{(n)})  .
+$$
+
 This avoids the calculation of multiple frequencies and skips the graphical solution technique.
-Once the self-consistency is reached, the final result should be insensitive to this technical choice:
+Once the self-consistency is reached $\epsilon_i^{(n-1)}=\epsilon_i^{(n)}$, the final result should be insensitive to this technical choice:
 the self-energy is evaluated at the correct self-consistent quasiparticle energy!
 
 

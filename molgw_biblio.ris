@@ -1,4 +1,98 @@
 TY  - JOUR
+PB  - Societa Italiana di Fisica
+ID  - molteni
+DO  - 10.1393/ncc/i2022-22175-7
+TI  - Ab initio circular dichroism with the yambo code: Beyond the independent particle approximation
+PY  - 2022/07/04/
+UR  - http://dx.doi.org/10.1393/ncc/i2022-22175-7
+JF  - IL NUOVO CIMENTO C
+JA  - Nuovo. Cimento C
+VL  - 45 C
+IS  - 6
+SP  - 175
+EP  - 
+A1  - Molteni, E.
+AU  - Mattioli, G.
+AU  - Sangalli, D.
+ER  - 
+
+TY  - JOUR
+T1  - An optimally tuned range-separated hybrid starting point for ab initio GW plus Bethe–Salpeter equation calculations of molecules
+AU  - McKeon,Caroline A. 
+AU  - Hamed,Samia M. 
+AU  - Bruneval,Fabien 
+AU  - Neaton,Jeffrey B. 
+Y1  - 2022/08/17
+PY  - 2022
+DA  - 2022/08/21
+N1  - doi: 10.1063/5.0097582
+DO  - 10.1063/5.0097582
+T2  - The Journal of Chemical Physics
+JF  - The Journal of Chemical Physics
+JO  - J. Chem. Phys.
+SP  - 074103
+VL  - 157
+IS  - 7
+PB  - American Institute of Physics
+SN  - 0021-9606
+M3  - doi: 10.1063/5.0097582
+UR  - https://doi.org/10.1063/5.0097582
+Y2  - 2022/09/15
+ER  - 
+
+TY  - JOUR
+T1  - Electronic Dynamics of a Molecular System Coupled to a Plasmonic Nanoparticle Combining the Polarizable Continuum Model and Many-Body Perturbation Theory
+AU  - Marsili, Margherita
+AU  - Corni, Stefano
+Y1  - 2022/05/26
+PY  - 2022
+DA  - 2022/05/26
+N1  - doi: 10.1021/acs.jpcc.2c02209
+DO  - 10.1021/acs.jpcc.2c02209
+T2  - The Journal of Physical Chemistry C
+JF  - The Journal of Physical Chemistry C
+JO  - J. Phys. Chem. C
+SP  - 8768
+EP  - 8776
+VL  - 126
+IS  - 20
+PB  - American Chemical Society
+SN  - 1932-7447
+M3  - doi: 10.1021/acs.jpcc.2c02209
+UR  - https://doi.org/10.1021/acs.jpcc.2c02209
+ER  - 
+
+TY  - JOUR
+T1  - Molecular Charge Transfer Effects on Perylene Diimide Acceptor and Dinaphthothienothiophene Donor Systems
+AU  - Rußegger, Nadine
+AU  - Valencia, Ana M.
+AU  - Merten, Lena
+AU  - Zwadlo, Matthias
+AU  - Duva, Giuliano
+AU  - Pithan, Linus
+AU  - Gerlach, Alexander
+AU  - Hinderhofer, Alexander
+AU  - Cocchi, Caterina
+AU  - Schreiber, Frank
+Y1  - 2022/03/03
+PY  - 2022
+DA  - 2022/03/03
+N1  - doi: 10.1021/acs.jpcc.1c10281
+DO  - 10.1021/acs.jpcc.1c10281
+T2  - The Journal of Physical Chemistry C
+JF  - The Journal of Physical Chemistry C
+JO  - J. Phys. Chem. C
+SP  - 4188
+EP  - 4198
+VL  - 126
+IS  - 8
+PB  - American Chemical Society
+SN  - 1932-7447
+M3  - doi: 10.1021/acs.jpcc.1c10281
+UR  - https://doi.org/10.1021/acs.jpcc.1c10281
+ER  - 
+
+TY  - JOUR
 PB  - American Physical Society
 ID  - qi_prl2022
 DO  - 10.1103/PhysRevLett.128.043401
