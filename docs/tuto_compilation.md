@@ -15,6 +15,21 @@ To be fully operational, **MOLGW** needs the following libraries:
 
 ## Standard route
 
+### Get the compilers
+
+A HPC machine already has the needed compilers.
+
+On a Linux distrubtion, install them with the package manager.
+
+For Ubuntu, issue
+```sh
+sudo apt-get install -y gcc gfortran g++
+```
+or for Fedora, CentOs, RedHat, issue
+```sh
+sudo dnf install gcc gcc-gfortran gcc-c++
+```
+
 ### Compiling LIBXC
 
 Obtain the latest LIBXC version, compile and install
@@ -26,11 +41,14 @@ cd libxc-6.1.0
 make
 make install
 ```
-On Linux distributions (Ubuntu, Fedora etc.), obtain the package from the package manager:
+
+On Linux distributions, obtain the package from the package manager.
+
+For Ubuntu, issue
 ```sh
 sudo apt-get install libxc-dev
 ```
-or
+or for Fedora, CentOs, RedHat, issue
 ```sh
 sudo dnf install libxc-dev
 ```

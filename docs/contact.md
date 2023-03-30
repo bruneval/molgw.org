@@ -27,4 +27,4 @@ And in particular to
 
 - Commissariat à l'énergie atomique et aux énergies alternatives [CEA](http://www.cea.fr)
 
-- Service de Recherches de Métallurgie Physique [SRMP](https://www.pluginlabs-universiteparissaclay.fr/en/entity/914306-service-de-recherches-de-metallurgie-physique-srmp)
+- Section de Recherches de Métallurgie Physique [SRMP](https://www.pluginlabs-universiteparissaclay.fr/en/entity/914306-service-de-recherches-de-metallurgie-physique-srmp)
