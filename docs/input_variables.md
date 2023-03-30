@@ -1,6 +1,6 @@
 # Input variable list
 
-*Version 3.0*
+*Version 3.1*
 
 ---
 
@@ -13,6 +13,9 @@
 ## Physical system setup input variables 
 
 [charge](#charge) 
+[electric_field_x](#electric_field_x) 
+[electric_field_y](#electric_field_y) 
+[electric_field_z](#electric_field_z) 
 [length_unit](#length_unit) 
 [magnetization](#magnetization) 
 [natom](#natom) 
@@ -26,6 +29,7 @@
 
 [auto_auxil_fsam](#auto_auxil_fsam) 
 [auto_auxil_lmaxinc](#auto_auxil_lmaxinc) 
+[auto_occupation](#auto_occupation) 
 [auxil_basis](#auxil_basis) 
 [basis](#basis) 
 [comment](#comment) 
@@ -35,6 +39,9 @@
 [ecp_quality](#ecp_quality) 
 [ecp_type](#ecp_type) 
 [eri3_genuine](#eri3_genuine) 
+[even_tempered_alpha](#even_tempered_alpha) 
+[even_tempered_beta](#even_tempered_beta) 
+[even_tempered_n_list](#even_tempered_n_list) 
 [gaussian_type](#gaussian_type) 
 [incore](#incore) 
 [memory_evaluation](#memory_evaluation) 
@@ -52,6 +59,7 @@
 [density_matrix_damping](#density_matrix_damping) 
 [diis_switch](#diis_switch) 
 [gamma_hybrid](#gamma_hybrid) 
+[kappa_hybrid](#kappa_hybrid) 
 [grid_quality](#grid_quality) 
 [init_hamiltonian](#init_hamiltonian) 
 [integral_quality](#integral_quality) 
@@ -59,16 +67,17 @@
 [level_shifting_energy](#level_shifting_energy) 
 [min_overlap](#min_overlap) 
 [mixing_scheme](#mixing_scheme) 
+[tolscf](#tolscf) 
 [npulay_hist](#npulay_hist) 
 [nscf](#nscf) 
 [partition_scheme](#partition_scheme) 
 [scf_diago_flavor](#scf_diago_flavor) 
-[tolscf](#tolscf) 
 
 
 ## Correlation and excited states post-treatment input variables 
 
 [assume_scf_converged](#assume_scf_converged) 
+[acfd_nlambda](#acfd_nlambda) 
 [ci_greens_function](#ci_greens_function) 
 [ci_nstate](#ci_nstate) 
 [ci_nstate_self](#ci_nstate_self) 
@@ -113,6 +122,9 @@
 ## Natural Orbital Functional Theory 
 
 [noft_complex](#noft_complex) 
+[noft_dft](#noft_dft) 
+[noft_rsintra](#noft_rsintra) 
+[noft_lowmemERI](#noft_lowmemERI) 
 [noft_fcidump](#noft_fcidump) 
 [noft_NOTupdateOCC](#noft_NOTupdateOCC) 
 [noft_NOTupdateORB](#noft_NOTupdateORB) 
@@ -126,7 +138,6 @@
 [noft_readOCC](#noft_readOCC) 
 [noft_sta](#noft_sta) 
 [noft_ithresh_lambda](#noft_ithresh_lambda) 
-[noft_lowmemERI](#noft_lowmemERI) 
 [noft_Lpower](#noft_Lpower) 
 [noft_npairs](#noft_npairs) 
 [noft_ncoupled](#noft_ncoupled) 
@@ -192,9 +203,13 @@
 [projectile_charge_scaling](#projectile_charge_scaling) 
 [r_disc](#r_disc) 
 [tddft_frozencore](#tddft_frozencore) 
+[tddft_wfn_t0](#tddft_wfn_t0) 
+[tddft_energy_shift](#tddft_energy_shift) 
+[tddft_charge](#tddft_charge) 
 [time_sim](#time_sim) 
 [time_step](#time_step) 
 [vel_projectile](#vel_projectile) 
+[tolscf_tddft](#tolscf_tddft) 
 
 
 ## IO Real time TDDFT 
@@ -210,14 +225,32 @@
 [print_line_rho_diff_tddft](#print_line_rho_diff_tddft) 
 [print_line_rho_tddft](#print_line_rho_tddft) 
 [print_tddft_matrices](#print_tddft_matrices) 
+[print_charge_tddft](#print_charge_tddft) 
 [print_tddft_restart](#print_tddft_restart) 
 [read_tddft_restart](#read_tddft_restart) 
 [write_step](#write_step) 
+[calc_charge_step](#calc_charge_step) 
 
 
 ---
 
 ## Complete list of input variables 
+
+---
+### acfd_nlambda
+
+*Optional* 
+
+**Family:** post 
+
+**Type:** integer 
+
+**Default:** 21 
+
+**Description:** 
+
+Specifies the number of Gauss-Legendre quadrature points when integrating over the coupling constant from 0 to 1. 
+
 
 ---
 ### alpha_hybrid
@@ -300,6 +333,22 @@ Sets the l_MAXINC parameter in the automatic generation of the auxiliary basis s
 
 
 ---
+### auto_occupation
+
+*Optional* 
+
+**Family:** general 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Automatically resets occupation during the TDDFT SCF loop 
+
+
+---
 ### auxil_basis
 
 *Optional* 
@@ -328,7 +377,7 @@ Sets the auxiliary basis set. For instance, cc-pVDZ-RI for a Weigend basis set. 
 
 **Description:** 
 
-Sets the basis set For Pople sets, use 6-31G for instance or 6-31+G\*. For Dunning sets, use aug-cc-pVTZ for instance. Note that Pople sets are to be used with gaussian_type='cart' One may use ones own basis sets provided that the files are labeled X_mybasisset where X is the element. 
+Sets the basis set. For Pople sets, use 6-31G for instance or 6-31+G\*. For Dunning sets, use aug-cc-pVTZ for instance. Note that Pople sets are to be used with gaussian_type='cart' One may use ones own basis sets provided that the files are labeled X_mybasisset where X is the element. Use 'even_tempered' for a systematic even-tempered basis. 
 
 
 ---
@@ -361,6 +410,22 @@ Sets the path pointing to the basis functions files. If not specified, then the 
 **Description:** 
 
 Only works for Range-Separated hybrid functionals scf='rsh' Sets the amount of long-range exact-exchange 
+
+
+---
+### calc_charge_step
+
+*Optional* 
+
+**Family:** io_rt_tddft 
+
+**Type:** real 
+
+**Default:** 1 
+
+**Description:** 
+
+Determines the time step for local charge analysis and writing to file 
 
 
 ---
@@ -582,7 +647,7 @@ Sets the number of grid points along Z in cube file outputs
 
 **Type:** integer 
 
-**Default:** 0 
+**Default:** 1 
 
 **Description:** 
 
@@ -598,7 +663,7 @@ Sets the state range maximum used in cube file outputs
 
 **Type:** integer 
 
-**Default:** 0 
+**Default:** 1 
 
 **Description:** 
 
@@ -752,6 +817,54 @@ Name of the Effective Core Potential. For instance, Gold using the cc-pVDZ-PP ba
 
 
 ---
+### electric_field_x
+
+*Optional* 
+
+**Family:** system 
+
+**Type:** real 
+
+**Default:** 0.0 
+
+**Description:** 
+
+Sets the magnitude of the electric field along x 
+
+
+---
+### electric_field_y
+
+*Optional* 
+
+**Family:** system 
+
+**Type:** real 
+
+**Default:** 0.0 
+
+**Description:** 
+
+Sets the magnitude of the electric field along y 
+
+
+---
+### electric_field_z
+
+*Optional* 
+
+**Family:** system 
+
+**Type:** real 
+
+**Default:** 0.0 
+
+**Description:** 
+
+Sets the magnitude of the electric field along z 
+
+
+---
 ### eri3_genuine
 
 *Optional* 
@@ -829,6 +942,54 @@ Sets number of row processors for the distribution of the 3-center integrals.  e
 **Description:** 
 
 Is a the tiny imaginary part used in the denominator of the Green's function to shift the pole off the axis, so to avoid divergences.This is an energy in Hartree. It should be set to the lowest value possible in theory. However, in practice, a too low value of eta would induce huge and unstable GW corrections. The default value is usually very accurate and there is no need to use a lower value. But for states apart from the band gap, a large value of eta may be beneficial for stability. eta=0.01 is already much more stable. Note that for QSGW increasing eta is most often unavoidable. 
+
+
+---
+### even_tempered_alpha
+
+*Optional* 
+
+**Family:** general 
+
+**Type:** real 
+
+**Default:** 1.0 
+
+**Description:** 
+
+Central exponent (most localized gaussian) in the even-tempered basis set construction. Only meaningful when basis='even_tempered'. 
+
+
+---
+### even_tempered_beta
+
+*Optional* 
+
+**Family:** general 
+
+**Type:** real 
+
+**Default:** 0.5 
+
+**Description:** 
+
+Ratio between two subsequent exponents in the the even-tempered basis set construction. Only meaningful when basis='even_tempered'. 
+
+
+---
+### even_tempered_n_list
+
+*Optional* 
+
+**Family:** general 
+
+**Type:** characters 
+
+**Default:** 1 
+
+**Description:** 
+
+List of number of orbital for each angular momentum. Expects a string of space-separated integers. The maximum angular momentum is determined from the number of integers in the string. Only meaningful when basis='even_tempered'. 
 
 
 ---
@@ -1087,6 +1248,22 @@ Selects how to initiate the first hamiltonian for SCF cycles. Today, two options
 **Description:** 
 
 Sets the tolerance value for the screening of the negligible integrals. Possible values are 'low', 'medium', 'high', 'very high', 'insane'. It could be abbreviated in 'l', 'm', 'h', 'vh', 'i'. 'high' is usually fine. 'insane' is only meant for debugging since it is overdoing a lot. 
+
+
+---
+### kappa_hybrid
+
+*Optional* 
+
+**Family:** scf 
+
+**Type:** real 
+
+**Default:** 0.0 
+
+**Description:** 
+
+Works for scf='rsh', 'pbe-qidh', and 'b2plyp'. Sets the amount of Ec^X (X=MP2 or RPA) correlation in double-hybrid DFT functionals. 
 
 
 ---
@@ -1444,6 +1621,22 @@ Use complex molecular orb. coeficients in NOFT calcs. (default=no).
 
 
 ---
+### noft_dft
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Use the hybdrid approach NOFT + DFT in NOFT calcs. (default=no). 
+
+
+---
 ### noft_fcidump
 
 *Optional* 
@@ -1468,11 +1661,11 @@ Print the FCIDUMP file in NOFT module.
 
 **Type:** characters 
 
-**Default:** PNOF7 
+**Default:** GNOF 
 
 **Description:** 
 
-Select the NOFT approx. to use (default= 'PNOF7'). Other options are 'PNOF5', 'HF', 'MULLER', and 'POWER'. 
+Select the NOFT approx. to use (default= 'GNOF'). Other options are 'PNOF5', 'PNOF7', 'HF', 'MULLER', 'CA', 'CGA', and 'POWER'. 
 
 
 ---
@@ -1700,7 +1893,7 @@ Use binary files to restart NOFT calcs. (default= 'no').
 
 
 ---
-### noft_sta
+### noft_rsintra
 
 *Optional* 
 
@@ -1712,7 +1905,23 @@ Use binary files to restart NOFT calcs. (default= 'no').
 
 **Description:** 
 
-Decide whether to use PNOF7 or PNOF7s (default= 'yes', use 'PNOF7s'). 
+Use range-sep of intra-subspace two-body energies in (PNOFi and GNOF). 
+
+
+---
+### noft_sta
+
+*Optional* 
+
+**Family:** noft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Decide whether to use PNOF7 or PNOF7s, but it also affects GNOF (default= 'no', use 'PNOF7' and 'GNOF'). 
 
 
 ---
@@ -1987,7 +2196,7 @@ Selects the LAPACK/ScaLAPACK diagonalization routines in the post SCF calculatio
 
 **Type:** characters 
 
-**Default:** PC1 
+**Default:** PC2B 
 
 **Description:** 
 
@@ -2008,6 +2217,22 @@ Sets the predictor-corrector scheme in the real-time dynamics.
 **Description:** 
 
 Prints the big RESTART file at the end of the SCF loop. There are two kinds of RESTART files: the small RESTART and the big RESTART. The latter is written only when self-consistency has been reached. It contains all the states and the Hamiltonian and allows one to completely skip the scf loop or to start over with another basis set. 
+
+
+---
+### print_charge_tddft
+
+*Optional* 
+
+**Family:** io_rt_tddft 
+
+**Type:** yes/no 
+
+**Default:** no 
+
+**Description:** 
+
+Prints a Mulliken_Charge file that contains real-time mulliken projections. Related keyword calc_charge_step sets the writing times. 
 
 
 ---
@@ -2343,7 +2568,7 @@ Prints the difference of transition density \sum_{ia} C_{ia}^n \phi_i(r) \phi_a(
 
 **Description:** 
 
-Dumps the spectral function of the screened Coulomb W. This is necessary for a subsequent BSE run. 
+Dumps the spectral function of the screened Coulomb W. This is necessary for a subsequent BSE run when no auxiliary basis is used. When an auxiliary basis is used, MOLGW quickly recalculates the static polarizability with the sum-over-states formula at the BSE stage. 
 
 
 ---
@@ -2419,7 +2644,7 @@ Rescaling of the projectile charge
 
 **Type:** characters 
 
-**Default:** MAG2 
+**Default:** CN 
 
 **Description:** 
 
@@ -2716,7 +2941,39 @@ Sets the spacing between the frequencies where the GW self-energy is actually ca
 
 **Description:** 
 
-Triggers the calculation of the stopping power within linear-response theory. Only effective when postscf=''td'' or ''bse''. Avaialble values are ''no'', ''spherical'', ''3d''. 
+Triggers the calculation of the stopping power within linear-response theory. Only effective when postscf=''td'' or ''bse''. Available values are ''no'', ''spherical'', ''3d''. 
+
+
+---
+### stopping_dq
+
+*Optional* 
+
+**Family:** postscf 
+
+**Type:** real 
+
+**Default:** 0.02 
+
+**Description:** 
+
+q-vector increment in the reciprocal space summation for stopping power calculations. 
+
+
+---
+### stopping_nq
+
+*Optional* 
+
+**Family:** postscf 
+
+**Type:** integer 
+
+**Default:** 500 
+
+**Description:** 
+
+Number of q-vectors in the reciprocal space summation for stopping power calculations. 
 
 
 ---
@@ -2733,6 +2990,38 @@ Triggers the calculation of the stopping power within linear-response theory. On
 **Description:** 
 
 Triggers the use of Tamm-Dancoff approximation in TD-DFT or BSE. 
+
+
+---
+### tddft_charge
+
+*Optional* 
+
+**Family:** rt_tddft 
+
+**Type:** real 
+
+**Default:** -999.0 
+
+**Description:** 
+
+Overall charge in the system fo the TDDFT calculation. Default value means it is equal to 'charge' in the DFT part. But if specified, it can differ from 'charge'. 
+
+
+---
+### tddft_energy_shift
+
+*Optional* 
+
+**Family:** rt_tddft 
+
+**Type:** real 
+
+**Default:** 0.0 
+
+**Description:** 
+
+Shifts the TDDFT eigenvalues in when tddft_wfn_t0='STATIONARY' to tune the occupation of the projectile. A positive value would depopulate the projectile (=creates a positive ion). 
 
 
 ---
@@ -2765,6 +3054,22 @@ Do not "propagate" states mentioned in the manual_tddft_frozencore file in the r
 **Description:** 
 
 Sets the number of grid points use to evaluate the exchange-correlation integrals in real space for the TDDFT kernel. Possible values are 'low', 'medium', 'high', 'very high', 'insane'. It could be abbreviated in 'l', 'm', 'h', 'vh', 'i'. 'high' is usually fine. 'insane' is only meant for debugging since it is overdoing a lot. 
+
+
+---
+### tddft_wfn_t0
+
+*Optional* 
+
+**Family:** rt_tddft 
+
+**Type:** characters 
+
+**Default:** SCF 
+
+**Description:** 
+
+Specifies the method to obtain the initial wavefunctions. Possible values are 'SCF' or 'STATIONARY'. 
 
 
 ---
@@ -2857,6 +3162,22 @@ Sets the target threshold for the maximum force component after nuclei relaxatio
 **Type:** real 
 
 **Default:** 1e-07 
+
+**Description:** 
+
+Sets the residual norm target for the density matrix for the SCF cycles. 
+
+
+---
+### tolscf_tddft
+
+*Optional* 
+
+**Family:** rt_tddft 
+
+**Type:** real 
+
+**Default:** 0.0001 
 
 **Description:** 
 
@@ -2961,6 +3282,6 @@ Specifies the location of the xyz file that contains the atomic positions. It ca
 
 
 
-*Generated by input_variables.py on 21 March 2022* 
+*Generated by input_variables.py on 28 March 2023* 
 
 

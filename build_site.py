@@ -40,7 +40,10 @@ for entry in entries:
     try:
         string += entry['journal_name'] 
     except:
-        string += entry['alternate_title2'] 
+        try:
+            string += entry['alternate_title2'] 
+        except:
+            string += entry['secondary_title'] 
     string += " <b>" + entry['volume'] + "</b>, "
     string +=         entry['start_page']
     year = entry['year'].split("/")[0]
