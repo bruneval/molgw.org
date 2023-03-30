@@ -47,6 +47,7 @@ It implements a self-consistent mean-field calculation, followed by a many-body 
 - global hybrids: B3LYP, PBE0, BHLYP
 - range-separated hybrid: HSE06, CAM-B3LYP, LC-$\omega$PBE, OTRSH, BNL
 - Hartree-Fock
+- Double-hybrids
 
 **MOLGW** can calculate the electron quasiparticle energies within different flavors of the Many-body perturbation theory:
 
@@ -58,7 +59,7 @@ It implements a self-consistent mean-field calculation, followed by a many-body 
 - PT3, also known as Electron Propagator Theory
 
 
-**MOLGW** also has some densitu-matrix theory features:
+**MOLGW** also has some density-matrix theory features:
 
 - linearized $GW$ density-matrix
 - Natural Orbital functional Theory (NOFT)
@@ -72,7 +73,7 @@ It implements a self-consistent mean-field calculation, followed by a many-body 
 
 Incidentally, **MOLGW** can calculate the MBPT total energies within a few popular approximations:
 
-- Random-Phase Approximation
+- Random-Phase Approximation, RPAx
 - MP2
 - Full Configuration-Interaction for *very few* electrons
 
