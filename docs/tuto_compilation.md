@@ -141,10 +141,10 @@ Here is an example for gfortran with MKL, MPI and OPENMP.
 ```sh
 OPENMP= -fopenmp
 
-CPPFLAGS=-cpp -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
+CPPFLAGS=-DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
 
 FC=mpifort
-FCFLAGS=  -O2
+FCFLAGS= -O2 -cpp
 
 CXX=g++
 CXXFLAGS= -O2
@@ -188,7 +188,7 @@ gcc@10.2.1
 Then compiling the libraries should be a piece of cake:
 ```sh
 spack install openmpi                  # MPI
-spack install intel-mkl                # BLAS/LAPACK/SCALAPACK
+spack install intel-oneapi-mkl         # BLAS/LAPACK/SCALAPACK
 spack install libxc                    # LIBXC
 spack install libint tune=molgw-lmax-7 # LIBINT compilation especially tuned for MOLGW
 ```
@@ -211,10 +211,10 @@ With this, edit the file `molgw/src/my_machine.arch`:
 ```sh
 OPENMP= -fopenmp
 
-CPPFLAGS=-cpp -DHAVE_LIBXC -DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
+CPPFLAGS=-DHAVE_MPI -DHAVE_SCALAPACK -DHAVE_MKL
 
 FC=mpifort
-FCFLAGS=  -O2
+FCFLAGS= -O2 -cpp
 
 CXX=g++
 CXXFLAGS= -O2
