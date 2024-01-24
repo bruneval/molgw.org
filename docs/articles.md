@@ -1,8 +1,8 @@
 # Articles
 
-List of articles reporting calculations with **MOLGW**
+List of articles reporting calculations performed with **MOLGW**
 
-*Do not hesitate to report your work to us.*
+*Please do not hesitate to report your work to us.*
 
 
 List to be filled here

@@ -44,11 +44,14 @@ for entry in entries:
             string += entry['alternate_title2'] 
         except:
             string += entry['secondary_title'] 
-    string += " <b>" + entry['volume'] + "</b>, "
-    string +=         entry['start_page']
+    if 'volume' in entry.keys():
+        string += " <b>" + entry['volume'] + "</b>, "
+    if 'start_page' in entry.keys():
+        string +=         entry['start_page']
     year = entry['year'].split("/")[0]
     string += " (" + year + "). <br>\n"
-    string += "        <a href=http://dx.doi.org/" + entry['doi'] + ">"
+    if 'urls' in entry.keys():
+        string += f"        <a href={entry['urls'][0]}>"
     try:
         string += entry['primary_title'] + "</a>\n"
     except:

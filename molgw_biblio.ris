@@ -1,4 +1,81 @@
 TY  - JOUR
+T1  - Application to nonlinear optical properties of the RSX-QIDH double-hybrid range-separated functional
+AU  - Rodríguez-Mayorga, M.
+AU  - Besalú-Sala, P.
+AU  - Pérez-Jiménez, Á. J.
+AU  - Sancho-García, J. C.
+Y1  - 2024/01/11
+PY  - 2024
+DA  - 2024/01/11
+DO  - https://doi.org/10.1002/jcc.27302
+T2  - J. Comput. Chem.
+JF  - Journal of Computational Chemistry
+JO  - Journal of Computational Chemistry
+JA  - J. Comput. Chem.
+PB  - John Wiley & Sons, Ltd
+SN  - 0192-8651
+UR  - https://doi.org/10.1002/jcc.27302
+Y2  - 2024/01/24
+ER  -
+
+TY  - MISC
+AU  - Bruneval, Fabien
+AU  - Förster, Arno
+TI  - Fully dynamic G3W2 self-energy for finite systems: Formulas and benchmark
+T2  - arXiv [physics.comp-ph]
+PY  - 2024
+DA  - 2024
+UR  - http://arxiv.org/abs/2401.12892
+ER  -
+
+TY  - JOUR
+T1  - A Computational Exploration of Exohedrally Transition Metal Doped Si94– Superatom Based Magnetic MSi9M′ Clusters (M, M′ = Sc(II) to Cu(II))
+AU  - Mandal, Abhijit
+AU  - Goswami, Tamal
+AU  - Chowdhury, Shubhamoy
+Y1  - 2023/11/30
+PY  - 2023
+DA  - 2023/11/30
+N1  - doi: 10.1021/acs.jpca.3c03883
+DO  - 10.1021/acs.jpca.3c03883
+T2  - The Journal of Physical Chemistry A
+JF  - The Journal of Physical Chemistry A
+JO  - J. Phys. Chem. A
+SP  - 9885
+EP  - 9894
+VL  - 127
+IS  - 47
+PB  - American Chemical Society
+SN  - 1089-5639
+M3  - doi: 10.1021/acs.jpca.3c03883
+UR  - https://doi.org/10.1021/acs.jpca.3c03883
+ER  -
+
+TY  - JOUR
+T1  - Theoretical Study on the Optoelectronic Properties of Merocyanine-Dyes
+AU  - Tomar, Ritu
+AU  - Bernasconi, Leonardo
+AU  - Fazzi, Daniele
+AU  - Bredow, Thomas
+Y1  - 2023/11/23
+PY  - 2023
+DA  - 2023/11/23
+N1  - doi: 10.1021/acs.jpca.3c04226
+DO  - 10.1021/acs.jpca.3c04226
+T2  - The Journal of Physical Chemistry A
+JF  - The Journal of Physical Chemistry A
+JO  - J. Phys. Chem. A
+SP  - 9661
+EP  - 9671
+VL  - 127
+IS  - 46
+PB  - American Chemical Society
+SN  - 1089-5639
+M3  - doi: 10.1021/acs.jpca.3c04226
+UR  - https://doi.org/10.1021/acs.jpca.3c04226
+ER  -
+
+TY  - JOUR
 DO  - 10.1088/2516-1075/acf2d4
 UR  - https://dx.doi.org/10.1088/2516-1075/acf2d4
 TI  - Excitons in organic materials: revisiting old concepts with new insights
@@ -18,7 +95,7 @@ IS  - 3
 VL  - 5
 SN  - 2516-1075
 SN  - 
-ER  - 
+ER  -
 
 TY  - JOUR
 PB  - American Physical Society
@@ -38,7 +115,7 @@ A1  - Denawi, Adam Hassan
 AU  - Bruneval, Fabien
 AU  - Torrent, Marc
 AU  - Rodríguez-Mayorga, Mauricio
-ER  - 
+ER  -
 
 TY  - JOUR
 T1  - Molecular Doping in the Organic Semiconductor Diindenoperylene: Insights from Many-Body Perturbation Theory
@@ -62,7 +139,7 @@ PB  - American Chemical Society
 SN  - 1932-7447
 M3  - doi: 10.1021/acs.jpcc.3c03758
 UR  - https://doi.org/10.1021/acs.jpcc.3c03758
-ER  - 
+ER  -
 
 TY  - JOUR
 T1  - Exploring the range of applicability of anisotropic optical detection in axially coordinated supramolecular structures
