@@ -1,4 +1,31 @@
 TY  - JOUR
+T1  - GPU acceleration of many-body perturbation theory methods in MOLGW with OpenACC
+AU  - Byun, Young-Moo
+AU  - Yoo, Jejoong
+Y1  - 2024/03/05
+PY  - 2024
+DA  - 2024/03/05
+DO  - https://doi.org/10.1002/qua.27345
+JF  - International Journal of Quantum Chemistry
+JO  - International Journal of Quantum Chemistry
+JA  - Int J Quantum Chem
+T2  - Int J Quantum Chem
+SP  - e27345
+VL  - 124
+IS  - 5
+KW  - GPU
+KW  - many-body perturbation theory
+KW  - MOLGW
+KW  - OpenACC
+KW  - quasiparticle self-consistent GW
+PB  - John Wiley & Sons, Ltd
+SN  - 0020-7608
+UR  - https://doi.org/10.1002/qua.27345
+Y2  - 2024/02/25
+N2  - Abstract Quasiparticle self-consistent many-body perturbation theory (MBPT) methods that update both eigenvalues and eigenvectors can calculate the excited-state properties of molecular systems without depending on the choice of starting points. However, those methods are computationally intensive even on modern multi-core central processing units (CPUs) and thus typically limited to small systems. Many-core accelerators such as graphics processing units (GPUs) may be able to boost the performance of those methods without losing accuracy, making starting-point-independent MBPT methods applicable to large systems. Here, we GPU accelerate MOLGW, a Gaussian-based MBPT code for molecules, with open accelerators (OpenACC) and achieve speedups of up to 9.7?$$ 9.7\times $$ over 32 open multi-processing (OpenMP) CPU threads.
+ER  - 
+
+TY  - JOUR
 T1  - Application to nonlinear optical properties of the RSX-QIDH double-hybrid range-separated functional
 AU  - Rodríguez-Mayorga, M.
 AU  - Besalú-Sala, P.
