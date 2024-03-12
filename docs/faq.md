@@ -4,7 +4,7 @@
 	
 *The list of answered questions is being built. If your question is not in the list, please contact us.*
 
-You may also consult the [Discussions](https://github.com/bruneval/molgw/discussions) section on our github page.
+You may also consult the [Discussions](https://github.com/molgw/molgw/discussions) section on our github page.
 
 
 ---

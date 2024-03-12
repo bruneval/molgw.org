@@ -2,13 +2,13 @@
 
 ## Sources
 
-- Latest release [MOLGW 3.2](https://github.com/bruneval/molgw/archive/v3.2.tar.gz)
+- Latest release [MOLGW 3.2](https://github.com/molgw/molgw/archive/v3.2.tar.gz)
 
-- Browse the latest sources directly on github [![github](img/icon_github.png)](https://github.com/bruneval/molgw)
+- Browse the latest sources directly on github [![github](img/icon_github.png)](https://github.com/molgw/molgw)
 
 - Clone **MOLGW** with `git` 
 ```sh
-git clone https://github.com/bruneval/molgw.git molgw
+git clone https://github.com/molgw/molgw.git molgw
 ```
 
 ## Compilation
