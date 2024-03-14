@@ -42,7 +42,7 @@ make
 make install
 ```
 
-On Linux distributions, obtain the package from the package manager.
+On up-to-date Linux distributions, you may obtain the package from the package manager.
 
 For Ubuntu, issue
 ```sh
@@ -50,7 +50,7 @@ sudo apt-get install libxc-dev
 ```
 or for Fedora, CentOs, RedHat, issue
 ```sh
-sudo dnf install libxc-dev
+sudo dnf install libxc-devel
 ```
 
 ### Compiling LIBCINT
@@ -61,10 +61,10 @@ From our tests, LIBCINT is faster and easier to compile *and* slightly faster to
 
 Here is a compilation example:
 ```sh
-wget https://github.com/sunqm/libcint/archive/refs/tags/v5.3.0.tar.gz
-tar xzf v5.3.0.tar.gz; cd libcint-5.3.0
+wget https://github.com/sunqm/libcint/archive/refs/tags/v6.1.2.tar.gz
+tar xzf v6.1.2.tar.gz; cd libcint-6.1.2
 mkdir build; cd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=${HOME}/opt/libcint-5.1.6/ -DWITH_RANGE_COULOMB=1 -DBUILD_SHARED_LIBS=0 -DPYPZPX=1 ..
+cmake -DCMAKE_INSTALL_PREFIX:PATH=${HOME}/opt/libcint-6.1.2/ -DWITH_RANGE_COULOMB=1 -DBUILD_SHARED_LIBS=0 -DPYPZPX=1 ..
 make; make install
 ```
 
