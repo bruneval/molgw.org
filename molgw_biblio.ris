@@ -22,7 +22,6 @@ PB  - John Wiley & Sons, Ltd
 SN  - 0020-7608
 UR  - https://doi.org/10.1002/qua.27345
 Y2  - 2024/02/25
-N2  - Abstract Quasiparticle self-consistent many-body perturbation theory (MBPT) methods that update both eigenvalues and eigenvectors can calculate the excited-state properties of molecular systems without depending on the choice of starting points. However, those methods are computationally intensive even on modern multi-core central processing units (CPUs) and thus typically limited to small systems. Many-core accelerators such as graphics processing units (GPUs) may be able to boost the performance of those methods without losing accuracy, making starting-point-independent MBPT methods applicable to large systems. Here, we GPU accelerate MOLGW, a Gaussian-based MBPT code for molecules, with open accelerators (OpenACC) and achieve speedups of up to 9.7?$$ 9.7\times $$ over 32 open multi-processing (OpenMP) CPU threads.
 ER  - 
 
 TY  - JOUR
@@ -31,29 +30,48 @@ AU  - Rodríguez-Mayorga, M.
 AU  - Besalú-Sala, P.
 AU  - Pérez-Jiménez, Á. J.
 AU  - Sancho-García, J. C.
-Y1  - 2024/01/11
+Y1  - 2024/05/15
 PY  - 2024
-DA  - 2024/01/11
+DA  - 2024/05/15
 DO  - https://doi.org/10.1002/jcc.27302
-T2  - J. Comput. Chem.
+T2  - Journal of Computational Chemistry
 JF  - Journal of Computational Chemistry
 JO  - Journal of Computational Chemistry
 JA  - J. Comput. Chem.
+SP  - 995
+EP  - 1001
+VL  - 45
+IS  - 13
+KW  - density functional theory
+KW  - double-hybrid density functionals
+KW  - nonlinear optical properties
 PB  - John Wiley & Sons, Ltd
 SN  - 0192-8651
 UR  - https://doi.org/10.1002/jcc.27302
-Y2  - 2024/01/24
-ER  -
+Y2  - 2024/05/03
+ER  - 
 
-TY  - MISC
+TY  - JOUR
+T1  - Fully Dynamic G3W2 Self-Energy for Finite Systems: Formulas and Benchmark
 AU  - Bruneval, Fabien
 AU  - Förster, Arno
-TI  - Fully dynamic G3W2 self-energy for finite systems: Formulas and benchmark
-T2  - arXiv [physics.comp-ph]
+Y1  - 2024/04/23
 PY  - 2024
-DA  - 2024
-UR  - http://arxiv.org/abs/2401.12892
-ER  -
+DA  - 2024/04/23
+N1  - doi: 10.1021/acs.jctc.4c00090
+DO  - 10.1021/acs.jctc.4c00090
+T2  - Journal of Chemical Theory and Computation
+JF  - Journal of Chemical Theory and Computation
+JO  - J. Chem. Theory Comput.
+SP  - 3218
+EP  - 3230
+VL  - 20
+IS  - 8
+PB  - American Chemical Society
+SN  - 1549-9618
+M3  - doi: 10.1021/acs.jctc.4c00090
+UR  - https://doi.org/10.1021/acs.jctc.4c00090
+ER  - 
 
 TY  - JOUR
 T1  - A Computational Exploration of Exohedrally Transition Metal Doped Si94– Superatom Based Magnetic MSi9M′ Clusters (M, M′ = Sc(II) to Cu(II))
