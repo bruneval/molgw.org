@@ -34,12 +34,12 @@ sudo dnf install gcc gcc-gfortran gcc-c++
 
 Obtain the latest LIBXC version, compile and install
 ```sh
-wget http://www.tddft.org/programs/libxc/down.php?file=6.1.0/libxc-6.1.0.tar.gz
-tar xzf libxc-6.1.0.tar.gz
-cd libxc-6.1.0
-./configure --prefix=$(HOME)/opt/libxc-6.1.0/
-make
-make install
+wget https://gitlab.com/libxc/libxc/-/archive/6.2.1/libxc-6.2.2.tar.gz
+tar xzf libxc-6.2.2.tar.gz
+cd libxc-6.2.2
+mkdir build; cd build
+cmake -DCMAKE_INSTALL_PREFIX:PATH=${HOME}/opt/libxc-6.2.2/ ..
+make -j; make install
 ```
 
 On up-to-date Linux distributions, you may obtain the package from the package manager.
