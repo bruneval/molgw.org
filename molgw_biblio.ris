@@ -1,4 +1,64 @@
 TY  - JOUR
+T1  - Influence of Electronic Correlations on Electron–Phonon Interactions of Molecular Systems with the GW and Coupled Cluster Methods
+AU  - Alvertis, Antonios M.
+AU  - Williams-Young, David B.
+AU  - Bruneval, Fabien
+AU  - Neaton, Jeffrey B.
+Y1  - 2024/07/02
+PY  - 2024
+DA  - 2024/07/02
+N1  - doi: 10.1021/acs.jctc.4c00327
+DO  - 10.1021/acs.jctc.4c00327
+T2  - Journal of Chemical Theory and Computation
+JF  - Journal of Chemical Theory and Computation
+JO  - J. Chem. Theory Comput.
+PB  - American Chemical Society
+SN  - 1549-9618
+M3  - doi: 10.1021/acs.jctc.4c00327
+UR  - https://doi.org/10.1021/acs.jctc.4c00327
+ER  - 
+
+TY  - JOUR
+AU  - Mansouri, Masoud
+AU  - Díaz, Cristina
+AU  - Martín, Fernando
+PY  - 2024
+DA  - 2024/07/04
+TI  - Optoelectronic properties of electron-acceptor molecules adsorbed on graphene/silicon carbide interfaces
+JF  - Communications Materials
+JO  - Commun. Mater.
+SP  - 117
+VL  - 5
+IS  - 1
+SN  - 2662-4443
+UR  - https://doi.org/10.1038/s43246-024-00549-6
+DO  - 10.1038/s43246-024-00549-6
+ID  - Mansouri2024
+ER  - 
+
+TY  - JOUR
+T1  - Tuning melanin: theoretical analysis of functional group impact on electrochemical and optical properties
+AU  - Heppner, Florian
+AU  - Al-Shamery, Noah
+AU  - Lee, Pooi See
+AU  - Bredow, Thomas
+Y1  - 2024
+PY  - 2024
+SP  - 5251
+EP  - 5259
+JF  - Materials Advances
+JO  - Mater. Adv.
+JA  - Mater. Adv.
+VL  - 5
+IS  - 12
+PB  - RSC
+SN  - 
+DO  - 10.1039/D4MA00192C
+M3  - 10.1039/D4MA00192C
+UR  - http://dx.doi.org/10.1039/D4MA00192C
+ER  - 
+
+TY  - JOUR
 T1  - GPU acceleration of many-body perturbation theory methods in MOLGW with OpenACC
 AU  - Byun, Young-Moo
 AU  - Yoo, Jejoong
@@ -7,9 +67,8 @@ PY  - 2024
 DA  - 2024/03/05
 DO  - https://doi.org/10.1002/qua.27345
 JF  - International Journal of Quantum Chemistry
-JO  - International Journal of Quantum Chemistry
-JA  - Int J Quantum Chem
-T2  - Int J Quantum Chem
+JO  - Int. J. Quantum Chem.
+T2  - Int. J. Quantum. Chem.
 SP  - e27345
 VL  - 124
 IS  - 5
@@ -36,7 +95,7 @@ DA  - 2024/05/15
 DO  - https://doi.org/10.1002/jcc.27302
 T2  - Journal of Computational Chemistry
 JF  - Journal of Computational Chemistry
-JO  - Journal of Computational Chemistry
+JO  - J. Comput. Chem.
 JA  - J. Comput. Chem.
 SP  - 995
 EP  - 1001
