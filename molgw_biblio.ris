@@ -1,4 +1,73 @@
 TY  - JOUR
+AU  - Vladaj, Matthieu
+AU  - Marécat, Quentin
+AU  - Senjean, Bruno
+AU  - Saubanère, Matthieu
+T1  - Variational minimization scheme for the one-particle reduced density matrix functional theory in the ensemble N-representability domain
+PY  - 2024
+Y1  - 2024/08/15
+DO  - 10.1063/5.0219898
+JO  - The Journal of Chemical Physics
+JA  - J. Chem. Phys.
+VL  - 161
+IS  - 7
+SP  - 074105
+SN  - 0021-9606
+Y2  - 9/5/2024
+UR  - https://doi.org/10.1063/5.0219898
+ER  - 
+
+TY  - JOUR
+T1  - Gas-phase PES and GW investigation of two widespread herbicides: MCPA and 2,4-dichlorophenoxyacetic acid
+AU  - Kuusik, Ivar
+AU  - Kook, Mati
+AU  - Käämbre, Tanel
+AU  - Michailoudi, Georgia
+AU  - Tõnisoo, Arvo
+AU  - Kisand, Vambola
+AU  - Pärna, Rainer
+JF  - Journal of Electron Spectroscopy and Related Phenomena
+JO  - J. Electron Spectrosc. Relat. Phenom.
+VL  - 275
+SP  - 147462
+PY  - 2024
+DA  - 2024/09/01/
+SN  - 0368-2048
+DO  - https://doi.org/10.1016/j.elspec.2024.147462
+UR  - https://www.sciencedirect.com/science/article/pii/S0368204824000458
+KW  - MCPA
+KW  - 2,4-D
+KW  - Electronic structure
+KW  - UPS
+KW  - PES
+KW  - DFT
+KW  - GW
+ER  - 
+
+TY  - JOUR
+T1  - An Innovative Approach for Precise Identification of the Lowest Unoccupied Molecular Orbital Using the Parametric Equation of Motion
+AU  - Kumar, Deepak
+AU  - Banuary, Mwdansar
+AU  - Gupta, Ashish Kumar
+Y1  - 2024/07/23
+PY  - 2024
+DA  - 2024/07/23
+N1  - doi: 10.1021/acs.jctc.4c00470
+DO  - 10.1021/acs.jctc.4c00470
+T2  - Journal of Chemical Theory and Computation
+JF  - Journal of Chemical Theory and Computation
+JO  - J. Chem. Theory Comput.
+SP  - 6009
+EP  - 6019
+VL  - 20
+IS  - 14
+PB  - American Chemical Society
+SN  - 1549-9618
+M3  - doi: 10.1021/acs.jctc.4c00470
+UR  - https://doi.org/10.1021/acs.jctc.4c00470
+ER  - 
+
+TY  - JOUR
 T1  - Influence of Electronic Correlations on Electron–Phonon Interactions of Molecular Systems with the GW and Coupled Cluster Methods
 AU  - Alvertis, Antonios M.
 AU  - Williams-Young, David B.
