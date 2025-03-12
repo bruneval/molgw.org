@@ -1,7 +1,50 @@
 TY  - JOUR
+T1  - Tunable Doping and Optoelectronic Modulation in Graphene-Covered 4H-SiC Surfaces
+AU  - Mansouri, Masoud
+AU  - Martín, Fernando
+AU  - Díaz, Cristina
+Y1  - 2025/02/27
+PY  - 2025
+DA  - 2025/02/27
+N1  - doi: 10.1021/acs.jpcc.4c06409
+DO  - 10.1021/acs.jpcc.4c06409
+T2  - The Journal of Physical Chemistry C
+JF  - The Journal of Physical Chemistry C
+JO  - J. Phys. Chem. C
+JA  - J. Phys. Chem. C
+SP  - 4155
+EP  - 4164
+VL  - 129
+IS  - 8
+PB  - American Chemical Society
+SN  - 1932-7447
+M3  - doi: 10.1021/acs.jpcc.4c06409
+UR  - https://doi.org/10.1021/acs.jpcc.4c06409
+ER  - 
+
+TY  - JOUR
+AU  - Rodríguez-Mayorga, Mauricio
+AU  - Loos, Pierre-François
+AU  - Bruneval, Fabien
+AU  - Visscher, Lucas
+T1  - Time-reversal symmetry in RDMFT and pCCD with complex-valued orbitals
+PY  - 2025
+Y1  - 2025/02/04
+DO  - 10.1063/5.0242504
+JO  - The Journal of Chemical Physics
+JA  - J. Chem. Phys.
+VL  - 162
+IS  - 5
+SP  - 054716
+SN  - 0021-9606
+Y2  - 3/12/2025
+UR  - https://doi.org/10.1063/5.0242504
+DO  - 10.1103/PhysRevA.110.062821
+ER  - 
+
+TY  - JOUR
 PB  - American Physical Society
 ID  - 10.1103/PhysRevA.110.062821
-DO  - 10.1103/PhysRevA.110.062821
 TI  - Self-consistent-field solution for unstable anions
 PY  - 2024/12/24/
 UR  - https://link.aps.org/doi/10.1103/PhysRevA.110.062821
@@ -14,7 +57,7 @@ SP  - 062821
 EP  - 
 A1  - Kumar, Deepak
 AU  - Gupta, Ashish Kumar
-ER  - 
+ER  -
 
 TY  - JOUR
 T1  - Why Does the GW Approximation Give Accurate Quasiparticle Energies? The Cancellation of Vertex Corrections Quantified
@@ -36,7 +79,7 @@ IS  - 51
 PB  - American Chemical Society
 M3  - doi: 10.1021/acs.jpclett.4c03126
 UR  - https://doi.org/10.1021/acs.jpclett.4c03126
-ER  - 
+ER  -
 
 TY  - JOUR
 DO  - 10.1088/1361-6455/ad83b0
@@ -70,8 +113,8 @@ T1  - A unique approach to address avoided crossings in the charge stabilization
 PY  - 2024
 Y1  - 2024/09/04
 DO  - 10.1063/5.0225287
-JO  - The Journal of Chemical Physics
-JA  - J. Chem. Phys.
+JA  - The Journal of Chemical Physics
+JO  - J. Chem. Phys.
 VL  - 161
 IS  - 9
 SP  - 094108
@@ -122,8 +165,8 @@ T1  - Variational minimization scheme for the one-particle reduced density matri
 PY  - 2024
 Y1  - 2024/08/15
 DO  - 10.1063/5.0219898
-JO  - The Journal of Chemical Physics
-JA  - J. Chem. Phys.
+JA  - The Journal of Chemical Physics
+JO  - J. Chem. Phys.
 VL  - 161
 IS  - 7
 SP  - 074105
