@@ -1,10 +1,11 @@
-# Many-body perturbation theory for atoms, molecules, and clusters
+# MOLGW, Many-body perturbation theory for atoms, molecules, and clusters
 
 ![MOLGW](img/molgw.png)
 
 ![proton_in_lif](img/lif_channel_ACQZ_translucent.gif)
 *A swift proton in rocksalt LiF within Real-time TD-DFT [from [X. Qi et al., Phys. Rev. Lett. (2022)](http://dx.doi.org/10.1103/PhysRevLett.128.043401)]*
 
+## :tada: [MOLGW version 3.4 is out](https://github.com/molgw/molgw/discussions/48) :tada:
 
 ## MOLGW: What is it?
 

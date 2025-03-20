@@ -68,10 +68,10 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH=${HOME}/opt/libcint-6.1.2/ -DWITH_RANGE_COULOM
 make; make install
 ```
 
-We advise to compile your own version of LIBCINT, because the ones, we obtain from package managers (`apt-get`, `dnf`, `spack`, etc.) are
-unlikely to have the necessary options.
+We advise to compile your own version of LIBCINT, because the ones, we obtain from package managers (`apt-get`, `dnf`, `spack`, etc.) may not
+have the necessary options.
 
-For instance, `-DPYPZPX=1` enforces the MOLGW ordering of the p-orbitals.
+Option `-DPYPZPX=1` used to be necessary, but today MOLGW supports both p-orbital orderings.
 `-DWITH_RANGE_COULOMB=1` is necessary for $\mathrm{erf}(r)/r$ integrals in range-separated hybrids.
 
 
