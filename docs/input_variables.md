@@ -15,6 +15,9 @@
 
 ## Physical system setup input variables
 
+[a1](#a1)
+[a2](#a2)
+[a3](#a3)
 [charge](#charge)
 [electric_field_x](#electric_field_x)
 [electric_field_y](#electric_field_y)
@@ -24,6 +27,7 @@
 [natom](#natom)
 [nghost](#nghost)
 [nspin](#nspin)
+[poscar_file](#poscar_file)
 [temperature](#temperature)
 [xyz_file](#xyz_file)
 
@@ -45,6 +49,14 @@
 [even_tempered_alpha](#even_tempered_alpha)
 [even_tempered_beta](#even_tempered_beta)
 [even_tempered_n_list](#even_tempered_n_list)
+[fft_coulomb_exchange](#fft_coulomb_exchange)
+[fft_coulomb_hartree](#fft_coulomb_hartree)
+[fft_coulomb_cutoff](#fft_coulomb_cutoff)
+[fft_ecut](#fft_ecut)
+[fft_ecut_postscf](#fft_ecut_postscf)
+[fft_neighbors](#fft_neighbors)
+[fft_read_density](#fft_read_density)
+[fft_renormalize](#fft_renormalize)
 [gaussian_type](#gaussian_type)
 [incore](#incore)
 [memory_evaluation](#memory_evaluation)
@@ -52,14 +64,16 @@
 [nstep](#nstep)
 [scf](#scf)
 [complex_scf](#complex_scf)
+[bogoliubov_scf](#bogoliubov_scf)
+[bogoliubov_sigma](#bogoliubov_sigma)
 [tolforce](#tolforce)
 [x2c](#x2c)
 [c_speedlight](#c_speedlight)
 [parabolic_conf](#parabolic_conf)
 [rwconfinement](#rwconfinement)
 [harmonium](#harmonium)
-[approx_H_x2c](#approx_H_x2c)
-[check_CdSC_x2c](#check_CdSC_x2c)
+[approx_h_x2c](#approx_h_x2c)
+[check_cdsc_x2c](#check_cdsc_x2c)
 
 
 ## Self-consistency input variables
@@ -78,6 +92,7 @@
 [level_shifting_energy](#level_shifting_energy)
 [min_overlap](#min_overlap)
 [mixing_scheme](#mixing_scheme)
+[pbe_plus_alpha](#pbe_plus_alpha)
 [tolscf](#tolscf)
 [npulay_hist](#npulay_hist)
 [nscf](#nscf)
@@ -127,6 +142,12 @@
 [selfenergy_state_max](#selfenergy_state_max)
 [selfenergy_state_min](#selfenergy_state_min)
 [selfenergy_state_range](#selfenergy_state_range)
+[selfenergy_tdhf_alpha](#selfenergy_tdhf_alpha)
+[selfenergy_tdhf_beta](#selfenergy_tdhf_beta)
+[selfenergy_tdhf_gamma](#selfenergy_tdhf_gamma)
+[selfenergy_tdhf_delta](#selfenergy_tdhf_delta)
+[selfenergy_tdhf_epsilon](#selfenergy_tdhf_epsilon)
+[selfenergy_tdhf_zeta](#selfenergy_tdhf_zeta)
 [small_basis](#small_basis)
 [step_sigma](#step_sigma)
 [step_sigma_calc](#step_sigma_calc)
@@ -146,30 +167,31 @@
 [noft_hessian](#noft_hessian)
 [noft_nophases](#noft_nophases)
 [noft_dft](#noft_dft)
+[noft_dft0](#noft_dft0)
 [noft_rsinter](#noft_rsinter)
-[noft_lowmemERI](#noft_lowmemERI)
+[noft_lowmemeri](#noft_lowmemeri)
 [noft_fcidump](#noft_fcidump)
-[noft_NOTupdateOCC](#noft_NOTupdateOCC)
-[noft_NOTupdateORB](#noft_NOTupdateORB)
-[noft_NOTvxc](#noft_NOTvxc)
+[noft_notupdateocc](#noft_notupdateocc)
+[noft_notupdateorb](#noft_notupdateorb)
+[noft_notvxc](#noft_notvxc)
 [noft_functional](#noft_functional)
 [noft_printdmn](#noft_printdmn)
 [noft_printswdmn](#noft_printswdmn)
 [noft_printints](#noft_printints)
-[noft_readCOEF](#noft_readCOEF)
-[noft_readFdiag](#noft_readFdiag)
-[noft_readGAMMAS](#noft_readGAMMAS)
-[noft_readOCC](#noft_readOCC)
-[noft_NR_OCC](#noft_NR_OCC)
-[noft_QC_ORB](#noft_QC_ORB)
+[noft_readcoef](#noft_readcoef)
+[noft_readfdiag](#noft_readfdiag)
+[noft_readgammas](#noft_readgammas)
+[noft_readocc](#noft_readocc)
+[noft_nr_occ](#noft_nr_occ)
+[noft_qc_orb](#noft_qc_orb)
 [noft_ithresh_lambda](#noft_ithresh_lambda)
-[noft_Lpower](#noft_Lpower)
+[noft_lpower](#noft_lpower)
 [noft_npairs](#noft_npairs)
 [noft_ncoupled](#noft_ncoupled)
 [noft_ndiis](#noft_ndiis)
 [noft_nscf](#noft_nscf)
 [noft_restart](#noft_restart)
-[noft_tolE](#noft_tolE)
+[noft_tole](#noft_tole)
 
 
 ## IO input variables
@@ -189,7 +211,7 @@
 [print_cube](#print_cube)
 [print_transition_density](#print_transition_density)
 [print_wfn_files](#print_wfn_files)
-[print_all_MO_wfn_file](#print_all_MO_wfn_file)
+[print_all_mo_wfn_file](#print_all_mo_wfn_file)
 [print_density_matrix](#print_density_matrix)
 [print_eri](#print_eri)
 [print_hartree](#print_hartree)
@@ -243,6 +265,7 @@
 [time_step](#time_step)
 [vel_projectile](#vel_projectile)
 [tolscf_tddft](#tolscf_tddft)
+[scf_energy_shift](#scf_energy_shift)
 
 
 ## IO Real time TDDFT
@@ -253,7 +276,7 @@
 [print_cube_diff_tddft](#print_cube_diff_tddft)
 [print_cube_rho_tddft](#print_cube_rho_tddft)
 [print_c_matrix_cmplx_hdf5](#print_c_matrix_cmplx_hdf5)
-[print_p_matrix_MO_block_hdf5](#print_p_matrix_MO_block_hdf5)
+[print_p_matrix_mo_block_hdf5](#print_p_matrix_mo_block_hdf5)
 [print_dens_traj](#print_dens_traj)
 [print_dens_traj_points_set](#print_dens_traj_points_set)
 [print_dens_traj_tddft](#print_dens_traj_tddft)
@@ -270,6 +293,54 @@
 ---
 
 ## Complete list of input variables
+
+---
+### a1
+
+*Optional*
+
+**Family:** system
+
+**Type:** vector_1d_3
+
+**Default:** (0.0, 0.0, 0.0)
+
+**Description:**
+
+a1 periodicity vector
+
+
+---
+### a2
+
+*Optional*
+
+**Family:** system
+
+**Type:** vector_1d_3
+
+**Default:** (0.0, 0.0, 0.0)
+
+**Description:**
+
+a2 periodicity vector
+
+
+---
+### a3
+
+*Optional*
+
+**Family:** system
+
+**Type:** vector_1d_3
+
+**Default:** (0.0, 0.0, 0.0)
+
+**Description:**
+
+a3 periodicity vector
+
 
 ---
 ### acfd_nlambda
@@ -336,7 +407,7 @@ Calculates the spectral decomposition of the response function and then evaluate
 
 
 ---
-### approx_H_x2c
+### approx_h_x2c
 
 **experimental**
 
@@ -482,6 +553,42 @@ Only works for Range-Separated hybrid functionals scf='rsh' Sets the amount of l
 
 
 ---
+### bogoliubov_scf
+
+**experimental**
+
+*Optional*
+
+**Family:** general
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Perform a ground state calculation with Kohn-Sham Bogoliubov-de-Gennes formalism.
+
+
+---
+### bogoliubov_sigma
+
+**experimental**
+
+*Optional*
+
+**Family:** general
+
+**Type:** real
+
+**Default:** 1.0e0
+
+**Description:**
+
+Sets the sign to be used when building the pairing potential in Kohn-Sham Bogoliubov-de-Gennes formalism.
+
+
+---
 ### c_speedlight
 
 *Optional*
@@ -570,7 +677,7 @@ Calculates absorption spectrum in the real-time dynamics
 
 **Type:** characters
 
-**Default:** molgw_
+**Default:** molgw
 
 **Description:**
 
@@ -586,7 +693,7 @@ Specifies the rootname for the Cc4s files to be read.
 
 **Type:** characters
 
-**Default:** molgw_
+**Default:** molgw
 
 **Description:**
 
@@ -610,7 +717,7 @@ Sets the total charge of the system. 0 is a neutral system. -2 is a doubly charg
 
 
 ---
-### check_CdSC_x2c
+### check_cdsc_x2c
 
 **experimental**
 
@@ -1242,6 +1349,134 @@ The excitation pulse duration in atomic units for the real-time dynamics.
 
 
 ---
+### fft_coulomb_cutoff
+
+*Optional*
+
+**Family:** general
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+Sets the radius of the spherical cutoff of the Coulomb interaction with PBC. Default value triggers Spencer-Alavi recipe. Rc= (3/(4 pi) V)**(1/3)
+
+
+---
+### fft_coulomb_exchange
+
+*Optional*
+
+**Family:** general
+
+**Type:** characters
+
+**Default:** spherical
+
+**Description:**
+
+Selects the Coulomb interaction treatment in the exchange when using PBC. So far, only 'bare' and 'spherical' (for spherical cutoff) exist. Check out `fft_coulomb_cutoff` for the sphere radius.
+
+
+---
+### fft_coulomb_hartree
+
+*Optional*
+
+**Family:** general
+
+**Type:** characters
+
+**Default:** bare
+
+**Description:**
+
+Selects the Coulomb interaction treatment in electrostatics (Hartree, nucleus-nucleus, nucleus-electron), when using PBC. So far, only 'bare' and 'spherical' (for spherical cutoff) exist. Check out `fft_coulomb_cutoff` for the sphere radius.
+
+
+---
+### fft_ecut
+
+*Optional*
+
+**Family:** general
+
+**Type:** real
+
+**Default:** 120.0
+
+**Description:**
+
+Cutoff energy for the plane-waves used as auxiliary basis. This is equivalent to the density cutoff of a plane-wave code. This means that it is typically 4 times the wavefunction cutoff.
+
+
+---
+### fft_ecut_postscf
+
+*Optional*
+
+**Family:** general
+
+**Type:** real
+
+**Default:** 99999.0
+
+**Description:**
+
+Cutoff energy for the plane-waves used as auxiliary basis for postscf calculation/export.
+
+
+---
+### fft_neighbors
+
+*Optional*
+
+**Family:** general
+
+**Type:** integer
+
+**Default:** 1
+
+**Description:**
+
+Number of neighbors of the unit cell that are considered. `fft_neighbors=1` implies considering first neighboring cells, which yields 3**3=27 unit cells to calculate. `fft_neighbors=2` yields 5**3=125 unit cells.
+
+
+---
+### fft_read_density
+
+*Optional*
+
+**Family:** general
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Read the electronic density obtained from a previous calculation on the same FFT grid.
+
+
+---
+### fft_renormalize
+
+*Optional*
+
+**Family:** general
+
+**Type:** yes/no
+
+**Default:** yes
+
+**Description:**
+
+Renormalize the basis functions to unity. Basis functions may deviate from 1 in small cells.
+
+
+---
 ### force_energy_qp
 
 *Optional*
@@ -1792,102 +2027,6 @@ Sets the number of ghost atoms in the molecule. Used to place basis function whe
 
 
 ---
-### noft_Lpower
-
-*Optional*
-
-**Family:** noft
-
-**Type:** real
-
-**Default:** 0.53
-
-**Description:**
-
-Power functional approximation exponent used in NOFT calcs.
-
-
----
-### noft_NOTupdateOCC
-
-*Optional*
-
-**Family:** noft
-
-**Type:** yes/no
-
-**Default:** no
-
-**Description:**
-
-Do a NOFT optimization but keeping fixed the occ numbers (or GAMMAS) read.
-
-
----
-### noft_NOTupdateORB
-
-*Optional*
-
-**Family:** noft
-
-**Type:** yes/no
-
-**Default:** no
-
-**Description:**
-
-Do a NOFT optimization but keeping fixed the orbitals read.
-
-
----
-### noft_NOTvxc
-
-*Optional*
-
-**Family:** noft
-
-**Type:** yes/no
-
-**Default:** no
-
-**Description:**
-
-Do a RS-NOFT calculation without Vxc (i.e. adding a one-shot ExcDFT to the NOFT energy).
-
-
----
-### noft_NR_OCC
-
-*Optional*
-
-**Family:** noft
-
-**Type:** yes/no
-
-**Default:** no
-
-**Description:**
-
-Use quasi-Newton-Rapson method for the t and z amplitudes optimization in pCCD (default= 'no').
-
-
----
-### noft_QC_ORB
-
-*Optional*
-
-**Family:** noft
-
-**Type:** yes/no
-
-**Default:** no
-
-**Description:**
-
-Use the Quadratic Convergence method in orbital optimization by constructing the Hessian (default= 'no').
-
-
----
 ### noft_complex
 
 *Optional*
@@ -1917,6 +2056,22 @@ Use complex molecular orb. coeficients in NOFT calcs. (default=no).
 **Description:**
 
 Use the hybdrid approach NOFT + DFT in NOFT calcs. (default=no).
+
+
+---
+### noft_dft0
+
+*Optional*
+
+**Family:** noft
+
+**Type:** yes/no
+
+**Default:** yes
+
+**Description:**
+
+Use the hybdrid approach (DFT+NOFT)@NOFT in NOFT calcs. (default=yes).
 
 
 ---
@@ -1984,7 +2139,7 @@ Threshold used to determine [Lambda_pq - Lambda_qp*] hermiticity.
 
 
 ---
-### noft_lowmemERI
+### noft_lowmemeri
 
 *Optional*
 
@@ -1997,6 +2152,22 @@ Threshold used to determine [Lambda_pq - Lambda_qp*] hermiticity.
 **Description:**
 
 Store the nat. orb. ERI as (all,occ,occ,occ) (default) or as (all,all,all,all) in NOFT module.
+
+
+---
+### noft_lpower
+
+*Optional*
+
+**Family:** noft
+
+**Type:** real
+
+**Default:** 0.53
+
+**Description:**
+
+Power functional approximation exponent used in NOFT calcs.
 
 
 ---
@@ -2048,6 +2219,54 @@ Force orbitals to be real even if noft_complex='yes' in NOFT calcs. (default=no)
 
 
 ---
+### noft_notupdateocc
+
+*Optional*
+
+**Family:** noft
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Do a NOFT optimization but keeping fixed the occ numbers (or GAMMAS) read.
+
+
+---
+### noft_notupdateorb
+
+*Optional*
+
+**Family:** noft
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Do a NOFT optimization but keeping fixed the orbitals read.
+
+
+---
+### noft_notvxc
+
+*Optional*
+
+**Family:** noft
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Do a RS-NOFT calculation without Vxc (i.e. adding a one-shot ExcDFT to the NOFT energy).
+
+
+---
 ### noft_npairs
 
 *Optional*
@@ -2061,6 +2280,22 @@ Force orbitals to be real even if noft_complex='yes' in NOFT calcs. (default=no)
 **Description:**
 
 Number of active electron pairs used in NOFT calcs. (default=1 pair).
+
+
+---
+### noft_nr_occ
+
+*Optional*
+
+**Family:** noft
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Use quasi-Newton-Rapson method for the t and z amplitudes optimization in pCCD (default= 'no').
 
 
 ---
@@ -2128,7 +2363,23 @@ Print optimized spin-with NOFT 1,2-RDMs (default= 'no').
 
 
 ---
-### noft_readCOEF
+### noft_qc_orb
+
+*Optional*
+
+**Family:** noft
+
+**Type:** yes/no
+
+**Default:** no
+
+**Description:**
+
+Use the Quadratic Convergence method in orbital optimization by constructing the Hessian (default= 'no').
+
+
+---
+### noft_readcoef
 
 *Optional*
 
@@ -2144,7 +2395,7 @@ Read NO_COEF file to use those coefficients as initial guess (default= 'no').
 
 
 ---
-### noft_readFdiag
+### noft_readfdiag
 
 *Optional*
 
@@ -2160,7 +2411,7 @@ Read F_pp values from F_DIAG file and use them as diag. of Fpq matrix (default= 
 
 
 ---
-### noft_readGAMMAS
+### noft_readgammas
 
 *Optional*
 
@@ -2176,7 +2427,7 @@ Read Gammas_i from GAMMAS file and use them as indep. variables in occ. optimiza
 
 
 ---
-### noft_readOCC
+### noft_readocc
 
 *Optional*
 
@@ -2224,7 +2475,7 @@ Use range-sep for the inter-subspace two-body interactions in NOFT. (default=no)
 
 
 ---
-### noft_tolE
+### noft_tole
 
 *Optional*
 
@@ -2482,6 +2733,38 @@ Sets the partition scheme for the xc quadrature. Possible choices are 'becke' or
 
 
 ---
+### pbe_plus_alpha
+
+*Optional*
+
+**Family:** scf
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+Adds an empirical +alpha potential shift. So far, only working for Germanium.
+
+
+---
+### poscar_file
+
+*Optional*
+
+**Family:** system
+
+**Type:** characters
+
+**Default:** None
+
+**Description:**
+
+Specifies the location of a POSCAR file that contains the atomic positions and the lattice vectors. It can be used as an alternate route to set atomic coordinate when using periodic boundary conditions.
+
+
+---
 ### postscf
 
 *Optional*
@@ -2510,11 +2793,11 @@ Contains the post-processing scheme name. TD stands for TD-DFT or TD-HF. BSE sta
 
 **Description:**
 
-Selects the LAPACK/ScaLAPACK diagonalization routines in the post SCF calculations. Available choices are ' ', 'R', 'D', and 'X'.
+Selects the LAPACK/ScaLAPACK diagonalization routines in the post SCF calculations. Current available choices are ' ', 'R', 'D', 'X', 'L', 'G'. ' ' is the regular LAPACK/ScaLAPACK routine. 'D' is the divide-and-conquer LAPACK/ScaLAPACK routine. 'R' is the "relatively robust" LAPACK/ScaLAPACK routine. 'L' is the ELPA 2-stage CPU routine. 'G' is the ELPA 1-stage GPU routine.
 
 
 ---
-### print_all_MO_wfn_file
+### print_all_mo_wfn_file
 
 *Optional*
 
@@ -2802,7 +3085,7 @@ Prints the electric multipole expansion for the electronic density and the nucle
 
 
 ---
-### print_p_matrix_MO_block_hdf5
+### print_p_matrix_mo_block_hdf5
 
 *Optional*
 
@@ -3252,7 +3535,23 @@ Contains the self-consistent scheme name. Try LDA, PBE, HSE06, or HF for instanc
 
 **Description:**
 
-Selects the LAPACK/ScaLAPACK diagonalization routines in the SCF cycles. Available choices are ' ', 'R', 'D', and 'X'.
+Selects the LAPACK/ScaLAPACK diagonalization routines in the SCF cycles. Current available choices are ' ', 'R', 'D', 'X', 'L', 'G'. ' ' is the regular LAPACK/ScaLAPACK routine. 'D' is the divide-and-conquer LAPACK/ScaLAPACK routine. 'R' is the "relatively robust" LAPACK/ScaLAPACK routine. 'L' is the ELPA 2-stage CPU routine. 'G' is the ELPA 1-stage GPU routine.
+
+
+---
+### scf_energy_shift
+
+*Optional*
+
+**Family:** rt_tddft
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+Shifts the energy of the projectile to tune its occupation. A positive value would depopulate the projectile (=creates a positive ion).
 
 
 ---
@@ -3317,6 +3616,114 @@ Sets the starting states for the range of the self-energy evaluation
 **Description:**
 
 Sets the range of states around the HOMO level for the self-energy evaluation. For instance, selfenergy_state_range=0 will trigger the calculation of the HOMO only. selfenergy_state_range=1 will trigger the evaluation of the HOMO-1, HOMO, HOMO+1. etc.
+
+
+---
+### selfenergy_tdhf_alpha
+
+**experimental**
+
+*Optional*
+
+**Family:** post
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+TDHF and TDscHF self-energy parameter alpha
+
+
+---
+### selfenergy_tdhf_beta
+
+**experimental**
+
+*Optional*
+
+**Family:** post
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+TDHF and TDscHF self-energy parameter beta
+
+
+---
+### selfenergy_tdhf_delta
+
+**experimental**
+
+*Optional*
+
+**Family:** post
+
+**Type:** real
+
+**Default:** 2.0
+
+**Description:**
+
+TDHF and TDscHF self-energy parameter gamma
+
+
+---
+### selfenergy_tdhf_epsilon
+
+**experimental**
+
+*Optional*
+
+**Family:** post
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+TDHF and TDscHF self-energy parameter epsilon
+
+
+---
+### selfenergy_tdhf_gamma
+
+**experimental**
+
+*Optional*
+
+**Family:** post
+
+**Type:** real
+
+**Default:** 1.0
+
+**Description:**
+
+TDHF and TDscHF self-energy parameter gamma
+
+
+---
+### selfenergy_tdhf_zeta
+
+**experimental**
+
+*Optional*
+
+**Family:** post
+
+**Type:** real
+
+**Default:** 0.0
+
+**Description:**
+
+TDHF and TDscHF self-energy parameter zeta
 
 
 ---
@@ -3837,6 +4244,6 @@ Specifies a file name or path for the YAML formatted output. Default is `molgw.y
 
 
 
-*Generated by input_variables.py on 05 May 2025*
+*Generated by input_variables.py on 13 March 2026*
 
 

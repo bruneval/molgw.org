@@ -1,3 +1,61 @@
+
+TY  - JOUR
+T1  - Beyond the Edge: Charge-Transfer Excitons in Organic Donor-Acceptor Cocrystals
+AU  - Anhäuser, Sebastian
+AU  - Valencia, Ana M.
+AU  - Ivlev, Sergei I.
+AU  - Zeplichal, Marc
+AU  - Terfort, Andreas
+AU  - Cocchi, Caterina
+AU  - Witte, Gregor
+Y1  - 2026/02/04
+PY  - 2026
+DA  - 2026/02/04
+DO  - https://doi.org/10.1002/adfm.202530499
+T2  - Advanced Functional Materials
+JF  - Advanced Functional Materials
+JO  - Advanced Functional Materials
+JA  - Adv. Funct. Mater.
+SP  - e30499
+VL  - n/a
+IS  - n/a
+KW  - ab initio theory
+KW  - charge transfer excitons
+KW  - light-matter interaction
+KW  - many-body perturbation theory
+KW  - molecular acceptor-donor systems
+KW  - organic cocrystals
+PB  - John Wiley & Sons, Ltd
+SN  - 1616-301X
+UR  - https://doi.org/10.1002/adfm.202530499
+Y2  - 2026/03/13
+ER  -
+
+
+TY  - JOUR
+T1  - Time-Dependent Open-Quantum Approach to Two-Dimensional Electronic Spectroscopy within a GW/BSE Active Space
+AU  - Dall’Osto, Giulia
+AU  - Marsili, Margherita
+AU  - Corni, Stefano
+AU  - Coccia, Emanuele
+Y1  - 2026/03/10
+PY  - 2026
+DA  - 2026/03/10
+N1  - doi: 10.1021/acs.jctc.5c02002
+DO  - 10.1021/acs.jctc.5c02002
+T2  - Journal of Chemical Theory and Computation
+JF  - Journal of Chemical Theory and Computation
+JO  - J. Chem. Theory Comput.
+SP  - 2442
+EP  - 2452
+VL  - 22
+IS  - 5
+PB  - American Chemical Society
+SN  - 1549-9618
+M3  - doi: 10.1021/acs.jctc.5c02002
+UR  - https://doi.org/10.1021/acs.jctc.5c02002
+ER  - 
+
 TY  - JOUR
 AU  - Johnson, Paul A.
 AU  - Fecteau, Charles-Émile
@@ -15,16 +73,15 @@ VL  - 163
 IS  - 23
 SP  - 234115
 SN  - 0021-9606
-AB  - Slater determinants underpin most electronic structure methods, but orbital-based approaches often struggle to describe strong correlation efficiently. Geminal-based theories, by contrast, naturally capture static correlation in bond-breaking and multi-reference problems, though at the expense of implementation complexity and limited treatment of dynamic effects. In this work, we examine the interplay between orbital and geminal frameworks, focusing on perfect-pairing (PP) wavefunctions and their relation to pair coupled-cluster doubles (pCCD) and Richardson-Gaudin states. We show that PP arises as an eigenvector of a simplified, reduced Bardeen–Cooper–Schrieffer Hamiltonian expressed in bonding/antibonding orbital pairs, with the complementary eigenvectors enabling a systematic treatment of weak correlation. Second-order Epstein–Nesbet perturbation theory on top of PP is found to yield energies nearly equivalent to pCCD. These results clarify the role of pair-based ansätze and open avenues for hybrid approaches that combine the strengths of orbital- and geminal-based methods.
 Y2  - 2/10/2026
 UR  - https://doi.org/10.1063/5.0305612
 ER  - 
 
 TY  - JOUR
 T1  - The optical response of aromatic cyclocarbons
-A1  - Grillo, Simone
-A1  - Pulci, Olivia
-A1  - Giovannini, Tommaso
+AU  - Grillo, Simone
+AU  - Pulci, Olivia
+AU  - Giovannini, Tommaso
 Y1  - 2025
 SP  - 22465
 EP  - 22472
@@ -37,7 +94,7 @@ SN  - 2041-6520
 DO  - 10.1039/D5SC05519A
 M3  - 10.1039/D5SC05519A
 UR  - http://dx.doi.org/10.1039/D5SC05519A
-N2  - Cyclo[n]carbons are a recently synthesized class of carbon allotropes that offer a unique platform to probe electron delocalization, quantum confinement, and strong correlation effects. Their peculiar electronic properties and bond topologies make them attractive for next-generation molecular optoelectronic, photonic, and quantum technologies. To explore such a potential, a deep understanding of their optical response is necessary. Here, we present the first systematic characterization of the optical response of aromatic cyclo[n]carbons in the whole UV-Vis range, using state-of-the-art many-body methods. Our results show a remarkable tunability of their optical response with respect to ring size and structure, identifying key structure–property relationships. These findings provide a fundamental framework for tailoring the optical properties of π-conjugated carbon nanorings and offer design principles for their integration into adaptive molecular devices and quantum photonics architectures.
+PY  - 2025
 ER  - 
 
 
@@ -99,8 +156,8 @@ AU  - Lee, Pooi See
 PY  - 2025
 DA  - 2025/08/14
 TI  - Functionalized melanin for enhanced energy storage in aqueous and ionic liquid electrolytes
-JO  - Communications Chemistry
-JA  - Commun. Chem.
+JF  - Communications Chemistry
+JO  - Commun. Chem.
 SP  - 248
 VL  - 8
 IS  - 1
@@ -117,7 +174,8 @@ T1  - Application of parametric equations of motion to study uracil anion
 PY  - 2025
 Y1  - 2025/07/01
 DO  - 10.1063/5.0277968
-JO  - The Journal of Chemical Physics
+JF  - The Journal of Chemical Physics
+JO  - J. Chem. Phys.
 JA  - J. Chem. Phys.
 VL  - 163
 IS  - 1
