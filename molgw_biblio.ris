@@ -1,3 +1,40 @@
+TY  - JOUR
+PB  - American Physical Society
+ID  - 10.1103/qjv2-pbyy
+DO  - 10.1103/qjv2-pbyy
+TI  - Assessing the accuracy of exchange-correlation functionals in density functional theory for hydrogen-benzene and hydrogen-hydrogen interactions
+PY  - 2026/02/24/
+Y1  - 2026
+UR  - https://link.aps.org/doi/10.1103/qjv2-pbyy
+JF  - Physical Review B
+JA  - Phys. Rev. B
+J1  - PRB
+VL  - 113
+IS  - 8
+SP  - 085143
+EP  - 
+AU  - Kataoka, Yuta
+AU  - Hamada, Ikutaro
+ER  - 
+
+TY  - JOUR
+T1  - Which ab initio calculation methods describe the charge transfer in ionic liquid vapors? Case study on EMIM-OTF reveals the frontier orbitals and the ionization threshold
+AU  - Kuusik, Ivar
+AU  - Kivimäki, Antti
+AU  - Kisand, Vambola
+Y1  - 2026
+SP  - 13283
+EP  - 13303
+JF  - RSC Advances
+JO  - RSC Adv.
+VL  - 16
+IS  - 15
+PB  - The Royal Society of Chemistry
+SN  - 
+DO  - 10.1039/D5RA07324C
+M3  - 10.1039/D5RA07324C
+UR  - http://dx.doi.org/10.1039/D5RA07324C
+ER  - 
 
 TY  - JOUR
 T1  - Beyond the Edge: Charge-Transfer Excitons in Organic Donor-Acceptor Cocrystals
@@ -14,10 +51,9 @@ DA  - 2026/02/04
 DO  - https://doi.org/10.1002/adfm.202530499
 T2  - Advanced Functional Materials
 JF  - Advanced Functional Materials
-JO  - Advanced Functional Materials
+JO  - Adv. Funct. Mater.
 JA  - Adv. Funct. Mater.
 SP  - e30499
-VL  - n/a
 IS  - n/a
 KW  - ab initio theory
 KW  - charge transfer excitons

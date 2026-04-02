@@ -19,13 +19,13 @@ fhtml.write("<ol reversed>\n\n")
 for entry in entries:
     #debug
     #for k in entry.keys():
-    #    print(k,entry[k])
+    #    print(k, entry[k])
     string = '    <li>\n        '
     try:
         authors = entry['first_authors'] + entry['authors']
     except:
         authors = entry['authors']
-    for i,author in enumerate(authors):
+    for i, author in enumerate(authors):
         last_name   = author.split(',')[0]
         first_names = author.split(',')[1]
         initials = ''
@@ -46,9 +46,14 @@ for entry in entries:
             string += entry['secondary_title'] 
     if 'volume' in entry.keys():
         string += " <b>" + entry['volume'] + "</b>, "
+    else:
+        string += ", "
     if 'start_page' in entry.keys():
         string +=         entry['start_page']
-    year = entry['year'].split("/")[0]
+    try:
+        year = entry['year'].split("/")[0]
+    except:
+        year = entry['publication_year']
     string += " (" + year + "). <br>\n"
     if 'urls' in entry.keys():
         string += f"        <a href={entry['urls'][0]}>"
