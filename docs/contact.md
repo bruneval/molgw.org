@@ -16,11 +16,15 @@ And in particular to
 ## Contributors
 
 - [Fabien Bruneval](https://scholar.google.fr/citations?user=6Do-N4oAAAAJ) (CEA, France)
-- [Ivan Maliyov](https://www.linkedin.com/in/ivan-maliyov-406626b5) (CEA, France and now Caltech, USA)
+- [Ivan Maliyov](https://www.linkedin.com/in/ivan-maliyov-406626b5) (CEA, France and now Microsoft, Denmark)
 - Xixi Qi (CEA, France)
-- [Mauricio Rodriguez-Mayorga](https://scholar.google.com/citations?user=OLGOgQgAAAAJ) (CEA, France and now Vrije Universiteit Amsterdam, The Netherlands)
+- [Mauricio Rodriguez-Mayorga](https://scholar.google.com/citations?user=OLGOgQgAAAAJ) (CEA, France and now Université de Toulouse, France)
 - [Young-Moo Byun](https://scholar.google.com/citations?user=jCrIdBwAAAAJ) (UI Chicago, USA)
 - [Meiyue Shao](https://scholar.google.fr/citations?user=yk0MnRQAAAAJ) (UC Berkeley, USA)
+- Marc Sarraute (
+- Guillaume Piris (CEA, France)
+- [Caroline McKeon](https://scholar.google.com/citations?user=7HaH1ZoAAAAJ) (UC Berkeley, USA)
+
 
 
 ## Supporting institution
